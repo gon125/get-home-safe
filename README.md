@@ -1,7 +1,7 @@
 # get-home-safe
 
 ## 작업환경 셋팅
-1. Fork! 합니다. 🍴
+1. 현재 레포지토리를 Fork합니다. 🍴
 2. Fork한 레포지토리를 적절한 위치에 클론 한 후 터미널에서 아래의 shell scrip를 실행시킵니다.
 - <img width="626" alt="Screen Shot 2021-03-31 at 6 35 20 PM" src="https://user-images.githubusercontent.com/20037035/113123794-db0bfe00-924f-11eb-94a2-9bd5f1a41f30.png">
 

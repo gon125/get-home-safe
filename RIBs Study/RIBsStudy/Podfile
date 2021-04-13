@@ -6,7 +6,11 @@ target 'RIBsStudy' do
   use_frameworks!
 
   # Pods for RIBsStudy
-  pod 'RIBs', '~> 0.9'
-  pod 'SnapKit', '~> 5.0.0'
+  pod 'RIBs'
+  pod 'SnapKit'
+  pod 'RxCocoa'
 
+  target 'RIBsStudyTests' do
+	inherit! :search_paths
+  end
 end

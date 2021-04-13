@@ -6,6 +6,7 @@
 //
 
 import RIBs
+import RxCocoa
 import RxSwift
 import UIKit
 import SnapKit
@@ -65,10 +66,11 @@ final class LoggedOutViewController: UIViewController, LoggedOutPresentable, Log
         loginButton.setTitle("Login", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.backgroundColor = .black
-        loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        loginButton.rx.tap.subscribe(onNext:  { [weak self] in
+            self?.listener?.login(withPlayer1Name: player1Field.text, player2Name: player2Field.text)
+        })
+        .disposed(by: disposeBag)
     }
     
-    @objc private func didTapLoginButton() {
-        listener?.login(withPlayer1Name: player1Field?.text, player2Name: player2Field?.text)
-    }
+    private let disposeBag = DisposeBag()
 }

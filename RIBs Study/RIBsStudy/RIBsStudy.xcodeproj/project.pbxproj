@@ -3,11 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B04388F87A9A024F1E31085 /* Pods_RIBsStudyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D656208957F7CA7A878B14 /* Pods_RIBsStudyTests.framework */; };
+		6DAA95C7CB375FA179F70B5F /* Pods_RIBsStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F393682826246D70002246C5 /* Pods_RIBsStudy.framework */; };
 		BB42AFD25FF2FCB725942B22 /* Pods_RIBsStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8F29F8882AF63D873B99905 /* Pods_RIBsStudy.framework */; };
+		F30822CA26252D970033B9F2 /* RootInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30822C826252D970033B9F2 /* RootInteractorTests.swift */; };
+		F30822CB26252D970033B9F2 /* RootRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30822C926252D970033B9F2 /* RootRouterTests.swift */; };
+		F30822CF26252DE60033B9F2 /* TicTacToeMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30822CE26252DE60033B9F2 /* TicTacToeMocks.swift */; };
 		F31AB9CC261585D700D7821D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31AB9CB261585D700D7821D /* AppDelegate.swift */; };
 		F31AB9CE261585D700D7821D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31AB9CD261585D700D7821D /* SceneDelegate.swift */; };
 		F31AB9D0261585D700D7821D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31AB9CF261585D700D7821D /* ContentView.swift */; };
@@ -24,12 +29,43 @@
 		F31AB9FF2615A73800D7821D /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31AB9FB2615A73800D7821D /* LoggedOutBuilder.swift */; };
 		F31ABA002615A73800D7821D /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31AB9FC2615A73800D7821D /* LoggedOutInteractor.swift */; };
 		F31ABA112615AE4C00D7821D /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA102615AE4C00D7821D /* RootComponent+LoggedOut.swift */; };
+		F31ABA2D2615F49E00D7821D /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA2C2615F49E00D7821D /* RootComponent+LoggedIn.swift */; };
+		F31ABA332615F51200D7821D /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA302615F51200D7821D /* LoggedInRouter.swift */; };
+		F31ABA342615F51200D7821D /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA312615F51200D7821D /* LoggedInBuilder.swift */; };
+		F31ABA352615F51200D7821D /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA322615F51200D7821D /* LoggedInInteractor.swift */; };
+		F31ABA3D2616026800D7821D /* OffGameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA392616026800D7821D /* OffGameRouter.swift */; };
+		F31ABA3E2616026800D7821D /* OffGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA3A2616026800D7821D /* OffGameViewController.swift */; };
+		F31ABA3F2616026800D7821D /* OffGameBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA3B2616026800D7821D /* OffGameBuilder.swift */; };
+		F31ABA402616026800D7821D /* OffGameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABA3C2616026800D7821D /* OffGameInteractor.swift */; };
+		F35602A8261F1E4E00D772B4 /* LoggedInComponent+OffGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35602A7261F1E4E00D772B4 /* LoggedInComponent+OffGame.swift */; };
+		F35602AC261F1E9A00D772B4 /* LoggedInComponent+TicTacToe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35602AB261F1E9A00D772B4 /* LoggedInComponent+TicTacToe.swift */; };
+		F35602B3261F1EE900D772B4 /* TicTacToeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35602AF261F1EE900D772B4 /* TicTacToeRouter.swift */; };
+		F35602B4261F1EE900D772B4 /* TicTacToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35602B0261F1EE900D772B4 /* TicTacToeViewController.swift */; };
+		F35602B5261F1EE900D772B4 /* TicTacToeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35602B1261F1EE900D772B4 /* TicTacToeBuilder.swift */; };
+		F35602B6261F1EE900D772B4 /* TicTacToeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35602B2261F1EE900D772B4 /* TicTacToeInteractor.swift */; };
+		F398CE2D26252D0A00B144B9 /* RIBsStudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F398CE2C26252D0A00B144B9 /* RIBsStudyTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F398CE2F26252D0A00B144B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F31AB9C0261585D700D7821D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F31AB9C7261585D700D7821D;
+			remoteInfo = RIBsStudy;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2487477A20DCB51E5CA6CCE7 /* Pods-RIBsStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsStudy.release.xcconfig"; path = "Target Support Files/Pods-RIBsStudy/Pods-RIBsStudy.release.xcconfig"; sourceTree = "<group>"; };
+		5A6B4BF619CA279B6402955A /* Pods-RIBsStudyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsStudyTests.release.xcconfig"; path = "Target Support Files/Pods-RIBsStudyTests/Pods-RIBsStudyTests.release.xcconfig"; sourceTree = "<group>"; };
+		5A74611C793F32B190F4BC77 /* Pods-RIBsStudyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsStudyTests.debug.xcconfig"; path = "Target Support Files/Pods-RIBsStudyTests/Pods-RIBsStudyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96D656208957F7CA7A878B14 /* Pods_RIBsStudyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBsStudyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0D1C5DCAAA1EA9B2FA881C /* Pods-RIBsStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsStudy.debug.xcconfig"; path = "Target Support Files/Pods-RIBsStudy/Pods-RIBsStudy.debug.xcconfig"; sourceTree = "<group>"; };
 		E8F29F8882AF63D873B99905 /* Pods_RIBsStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBsStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F30822C826252D970033B9F2 /* RootInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractorTests.swift; sourceTree = "<group>"; };
+		F30822C926252D970033B9F2 /* RootRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouterTests.swift; sourceTree = "<group>"; };
+		F30822CE26252DE60033B9F2 /* TicTacToeMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicTacToeMocks.swift; sourceTree = "<group>"; };
 		F31AB9C8261585D700D7821D /* RIBsStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIBsStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31AB9CB261585D700D7821D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F31AB9CD261585D700D7821D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +84,25 @@
 		F31AB9FB2615A73800D7821D /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
 		F31AB9FC2615A73800D7821D /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 		F31ABA102615AE4C00D7821D /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		F31ABA2C2615F49E00D7821D /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
+		F31ABA302615F51200D7821D /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		F31ABA312615F51200D7821D /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		F31ABA322615F51200D7821D /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		F31ABA392616026800D7821D /* OffGameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameRouter.swift; sourceTree = "<group>"; };
+		F31ABA3A2616026800D7821D /* OffGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameViewController.swift; sourceTree = "<group>"; };
+		F31ABA3B2616026800D7821D /* OffGameBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameBuilder.swift; sourceTree = "<group>"; };
+		F31ABA3C2616026800D7821D /* OffGameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffGameInteractor.swift; sourceTree = "<group>"; };
+		F35602A7261F1E4E00D772B4 /* LoggedInComponent+OffGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+OffGame.swift"; sourceTree = "<group>"; };
+		F35602AB261F1E9A00D772B4 /* LoggedInComponent+TicTacToe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+TicTacToe.swift"; sourceTree = "<group>"; };
+		F35602AF261F1EE900D772B4 /* TicTacToeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeRouter.swift; sourceTree = "<group>"; };
+		F35602B0261F1EE900D772B4 /* TicTacToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeViewController.swift; sourceTree = "<group>"; };
+		F35602B1261F1EE900D772B4 /* TicTacToeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeBuilder.swift; sourceTree = "<group>"; };
+		F35602B2261F1EE900D772B4 /* TicTacToeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeInteractor.swift; sourceTree = "<group>"; };
+		F393682826246D70002246C5 /* Pods_RIBsStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_RIBsStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F393682C26246D7F002246C5 /* RIBs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RIBs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F398CE2A26252D0A00B144B9 /* RIBsStudyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RIBsStudyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F398CE2C26252D0A00B144B9 /* RIBsStudyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RIBsStudyTests.swift; sourceTree = "<group>"; };
+		F398CE2E26252D0A00B144B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +111,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB42AFD25FF2FCB725942B22 /* Pods_RIBsStudy.framework in Frameworks */,
+				6DAA95C7CB375FA179F70B5F /* Pods_RIBsStudy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F398CE2726252D0A00B144B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B04388F87A9A024F1E31085 /* Pods_RIBsStudyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +131,8 @@
 			children = (
 				DD0D1C5DCAAA1EA9B2FA881C /* Pods-RIBsStudy.debug.xcconfig */,
 				2487477A20DCB51E5CA6CCE7 /* Pods-RIBsStudy.release.xcconfig */,
+				5A74611C793F32B190F4BC77 /* Pods-RIBsStudyTests.debug.xcconfig */,
+				5A6B4BF619CA279B6402955A /* Pods-RIBsStudyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -74,15 +140,28 @@
 		5B8DEB68C863314950A64FA7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F393682C26246D7F002246C5 /* RIBs.framework */,
+				F393682826246D70002246C5 /* Pods_RIBsStudy.framework */,
 				E8F29F8882AF63D873B99905 /* Pods_RIBsStudy.framework */,
+				96D656208957F7CA7A878B14 /* Pods_RIBsStudyTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F30822C526252D850033B9F2 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				F30822C826252D970033B9F2 /* RootInteractorTests.swift */,
+				F30822C926252D970033B9F2 /* RootRouterTests.swift */,
+			);
+			path = Root;
 			sourceTree = "<group>";
 		};
 		F31AB9BF261585D700D7821D = {
 			isa = PBXGroup;
 			children = (
 				F31AB9CA261585D700D7821D /* RIBsStudy */,
+				F398CE2B26252D0A00B144B9 /* RIBsStudyTests */,
 				F31AB9C9261585D700D7821D /* Products */,
 				09CAE7006B127A922B09E29B /* Pods */,
 				5B8DEB68C863314950A64FA7 /* Frameworks */,
@@ -93,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				F31AB9C8261585D700D7821D /* RIBsStudy.app */,
+				F398CE2A26252D0A00B144B9 /* RIBsStudyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +180,9 @@
 		F31AB9CA261585D700D7821D /* RIBsStudy */ = {
 			isa = PBXGroup;
 			children = (
+				F35602AE261F1ECC00D772B4 /* TicTacToe */,
+				F31ABA382616025300D7821D /* OffGame */,
+				F31ABA2F2615F4D500D7821D /* LoggedIn */,
 				F31AB9F826158A8300D7821D /* LoggedOut */,
 				F31AB9F22615882F00D7821D /* Root */,
 				F31AB9CB261585D700D7821D /* AppDelegate.swift */,
@@ -129,6 +212,7 @@
 				F31AB9EA2615882A00D7821D /* RootViewController.swift */,
 				F31AB9EB2615882A00D7821D /* RootBuilder.swift */,
 				F31AB9EC2615882A00D7821D /* RootInteractor.swift */,
+				F31ABA2C2615F49E00D7821D /* RootComponent+LoggedIn.swift */,
 				F31ABA102615AE4C00D7821D /* RootComponent+LoggedOut.swift */,
 			);
 			path = Root;
@@ -143,6 +227,51 @@
 				F31AB9FC2615A73800D7821D /* LoggedOutInteractor.swift */,
 			);
 			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		F31ABA2F2615F4D500D7821D /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				F31ABA302615F51200D7821D /* LoggedInRouter.swift */,
+				F31ABA312615F51200D7821D /* LoggedInBuilder.swift */,
+				F31ABA322615F51200D7821D /* LoggedInInteractor.swift */,
+				F35602A7261F1E4E00D772B4 /* LoggedInComponent+OffGame.swift */,
+				F35602AB261F1E9A00D772B4 /* LoggedInComponent+TicTacToe.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		F31ABA382616025300D7821D /* OffGame */ = {
+			isa = PBXGroup;
+			children = (
+				F31ABA392616026800D7821D /* OffGameRouter.swift */,
+				F31ABA3A2616026800D7821D /* OffGameViewController.swift */,
+				F31ABA3B2616026800D7821D /* OffGameBuilder.swift */,
+				F31ABA3C2616026800D7821D /* OffGameInteractor.swift */,
+			);
+			path = OffGame;
+			sourceTree = "<group>";
+		};
+		F35602AE261F1ECC00D772B4 /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				F35602AF261F1EE900D772B4 /* TicTacToeRouter.swift */,
+				F35602B0261F1EE900D772B4 /* TicTacToeViewController.swift */,
+				F35602B1261F1EE900D772B4 /* TicTacToeBuilder.swift */,
+				F35602B2261F1EE900D772B4 /* TicTacToeInteractor.swift */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		F398CE2B26252D0A00B144B9 /* RIBsStudyTests */ = {
+			isa = PBXGroup;
+			children = (
+				F30822CE26252DE60033B9F2 /* TicTacToeMocks.swift */,
+				F30822C526252D850033B9F2 /* Root */,
+				F398CE2C26252D0A00B144B9 /* RIBsStudyTests.swift */,
+				F398CE2E26252D0A00B144B9 /* Info.plist */,
+			);
+			path = RIBsStudyTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +296,25 @@
 			productReference = F31AB9C8261585D700D7821D /* RIBsStudy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F398CE2926252D0A00B144B9 /* RIBsStudyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F398CE3126252D0A00B144B9 /* Build configuration list for PBXNativeTarget "RIBsStudyTests" */;
+			buildPhases = (
+				FED0F0DB5C55A37525CA2DFB /* [CP] Check Pods Manifest.lock */,
+				F398CE2626252D0A00B144B9 /* Sources */,
+				F398CE2726252D0A00B144B9 /* Frameworks */,
+				F398CE2826252D0A00B144B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F398CE3026252D0A00B144B9 /* PBXTargetDependency */,
+			);
+			name = RIBsStudyTests;
+			productName = RIBsStudyTests;
+			productReference = F398CE2A26252D0A00B144B9 /* RIBsStudyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -179,10 +327,14 @@
 					F31AB9C7261585D700D7821D = {
 						CreatedOnToolsVersion = 12.4;
 					};
+					F398CE2926252D0A00B144B9 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = F31AB9C7261585D700D7821D;
+					};
 				};
 			};
 			buildConfigurationList = F31AB9C3261585D700D7821D /* Build configuration list for PBXProject "RIBsStudy" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -195,6 +347,7 @@
 			projectRoot = "";
 			targets = (
 				F31AB9C7261585D700D7821D /* RIBsStudy */,
+				F398CE2926252D0A00B144B9 /* RIBsStudyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +360,13 @@
 				F31AB9D8261585D700D7821D /* LaunchScreen.storyboard in Resources */,
 				F31AB9D5261585D700D7821D /* Preview Assets.xcassets in Resources */,
 				F31AB9D2261585D700D7821D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F398CE2826252D0A00B144B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +412,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FED0F0DB5C55A37525CA2DFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RIBsStudyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,23 +441,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F31ABA402616026800D7821D /* OffGameInteractor.swift in Sources */,
+				F31ABA342615F51200D7821D /* LoggedInBuilder.swift in Sources */,
+				F35602AC261F1E9A00D772B4 /* LoggedInComponent+TicTacToe.swift in Sources */,
 				F31AB9EE2615882A00D7821D /* RootViewController.swift in Sources */,
+				F35602B5261F1EE900D772B4 /* TicTacToeBuilder.swift in Sources */,
+				F31ABA332615F51200D7821D /* LoggedInRouter.swift in Sources */,
 				F31AB9FF2615A73800D7821D /* LoggedOutBuilder.swift in Sources */,
+				F31ABA3D2616026800D7821D /* OffGameRouter.swift in Sources */,
 				F31AB9F52615892E00D7821D /* AppComponent.swift in Sources */,
+				F35602B6261F1EE900D772B4 /* TicTacToeInteractor.swift in Sources */,
 				F31AB9ED2615882A00D7821D /* RootRouter.swift in Sources */,
+				F31ABA352615F51200D7821D /* LoggedInInteractor.swift in Sources */,
 				F31AB9F02615882A00D7821D /* RootInteractor.swift in Sources */,
 				F31ABA002615A73800D7821D /* LoggedOutInteractor.swift in Sources */,
+				F35602B4261F1EE900D772B4 /* TicTacToeViewController.swift in Sources */,
 				F31AB9FD2615A73800D7821D /* LoggedOutRouter.swift in Sources */,
+				F35602A8261F1E4E00D772B4 /* LoggedInComponent+OffGame.swift in Sources */,
 				F31ABA112615AE4C00D7821D /* RootComponent+LoggedOut.swift in Sources */,
+				F31ABA3E2616026800D7821D /* OffGameViewController.swift in Sources */,
 				F31AB9CC261585D700D7821D /* AppDelegate.swift in Sources */,
+				F35602B3261F1EE900D772B4 /* TicTacToeRouter.swift in Sources */,
 				F31AB9CE261585D700D7821D /* SceneDelegate.swift in Sources */,
+				F31ABA2D2615F49E00D7821D /* RootComponent+LoggedIn.swift in Sources */,
 				F31AB9D0261585D700D7821D /* ContentView.swift in Sources */,
 				F31AB9EF2615882A00D7821D /* RootBuilder.swift in Sources */,
 				F31AB9FE2615A73800D7821D /* LoggedOutViewController.swift in Sources */,
+				F31ABA3F2616026800D7821D /* OffGameBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F398CE2626252D0A00B144B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F30822CF26252DE60033B9F2 /* TicTacToeMocks.swift in Sources */,
+				F30822CB26252D970033B9F2 /* RootRouterTests.swift in Sources */,
+				F30822CA26252D970033B9F2 /* RootInteractorTests.swift in Sources */,
+				F398CE2D26252D0A00B144B9 /* RIBsStudyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F398CE3026252D0A00B144B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F31AB9C7261585D700D7821D /* RIBsStudy */;
+			targetProxy = F398CE2F26252D0A00B144B9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F31AB9D6261585D700D7821D /* LaunchScreen.storyboard */ = {
@@ -415,6 +630,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RIBsStudy/Preview Content\"";
 				DEVELOPMENT_TEAM = 24523H34CV;
 				ENABLE_PREVIEWS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = RIBsStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,6 +653,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RIBsStudy/Preview Content\"";
 				DEVELOPMENT_TEAM = 24523H34CV;
 				ENABLE_PREVIEWS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = RIBsStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,6 +663,48 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F398CE3226252D0A00B144B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A74611C793F32B190F4BC77 /* Pods-RIBsStudyTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24523H34CV;
+				INFOPLIST_FILE = RIBsStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gon125.study.RIBsStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RIBsStudy.app/RIBsStudy";
+			};
+			name = Debug;
+		};
+		F398CE3326252D0A00B144B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A6B4BF619CA279B6402955A /* Pods-RIBsStudyTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 24523H34CV;
+				INFOPLIST_FILE = RIBsStudyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gon125.study.RIBsStudyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RIBsStudy.app/RIBsStudy";
 			};
 			name = Release;
 		};
@@ -466,6 +725,15 @@
 			buildConfigurations = (
 				F31AB9DD261585D700D7821D /* Debug */,
 				F31AB9DE261585D700D7821D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F398CE3126252D0A00B144B9 /* Build configuration list for PBXNativeTarget "RIBsStudyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F398CE3226252D0A00B144B9 /* Debug */,
+				F398CE3326252D0A00B144B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

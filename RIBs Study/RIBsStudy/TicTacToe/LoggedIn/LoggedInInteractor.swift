@@ -17,35 +17,40 @@
 import RIBs
 import RxSwift
 
-enum PlayerType: Int {
-    case player1 = 1
-    case player2
-}
-
 protocol LoggedInRouting: Routing {
     func cleanupViews()
-    func routeToTicTacToe()
-    func routeToOffGame()
+    func routeToOffGame(with games: [Game])
+    func routeToGame(with gameBuilder: GameBuildable)
 }
 
 protocol LoggedInListener: class {
     // TODO: Declare methods the interactor can invoke to communicate with other RIBs.
 }
 
-final class LoggedInInteractor: Interactor, LoggedInInteractable {
+final class LoggedInInteractor: Interactor, LoggedInInteractable, LoggedInActionableItem {
+    func launchGame(with id: String?) -> Observable<(LoggedInActionableItem, ())> {
+        let game: Game? = games.first { $0.id.lowercased() == id?.lowercased() }
+        if let game = game {
+            router?.routeToGame(with: game.builder)
+        }
+        return Observable.just((self, ()))
+    }
+    
 
     weak var router: LoggedInRouting?
     weak var listener: LoggedInListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    init(mutableScoreStream: MutableScoreStream) {
-        self.mutableScoreStream = mutableScoreStream
+    init(games: [Game]) {
+        self.games = games
+        super.init()
     }
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        // TODO: Implement business logic here.
+
+        router?.routeToOffGame(with: games)
     }
 
     override func willResignActive() {
@@ -57,17 +62,18 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
 
     // MARK: - OffGameListener
 
-    func startTicTacToe() {
-        router?.routeToTicTacToe()
+    func startGame(with gameBuilder: GameBuildable) {
+        router?.routeToGame(with: gameBuilder)
     }
 
     // MARK: - TicTacToeListener
 
-    func gameDidEnd(withWinner winner: PlayerType?) {
-        mutableScoreStream.updateScore(withWinner: winner)
-        router?.routeToOffGame()
+    func gameDidEnd(with winner: PlayerType?) {
+        router?.routeToOffGame(with: games)
     }
-    
+
     // MARK: - Private
-    private let mutableScoreStream: MutableScoreStream
+
+    private var games = [Game]()
+
 }

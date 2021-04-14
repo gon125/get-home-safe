@@ -16,15 +16,16 @@
 
 import RIBs
 
-/// The dependencies needed from the parent scope of LoggedIn to provide for the OffGame scope.
-// TODO: Update LoggedInDependency protocol to inherit this protocol.
-protocol LoggedInDependencyOffGame: Dependency {
-
-    // TODO: Declare dependencies needed from the parent scope of LoggedIn to provide dependencies
-    // for the OffGame scope.
+public protocol GameListener: class {
+    func gameDidEnd(with winner: PlayerType?)
 }
 
-extension LoggedInComponent: OffGameDependency {
+public protocol GameBuildable: Buildable {
+    func build(withListener listener: GameListener) -> ViewableRouting
+}
 
-    // TODO: Implement properties to provide for OffGame scope.
+public protocol Game {
+    var id: String { get }
+    var name: String { get }
+    var builder: GameBuildable { get }
 }

@@ -26,7 +26,8 @@ final class TicTacToeViewController: UIViewController, TicTacToePresentable, Tic
 
     weak var listener: TicTacToePresentableListener?
 
-    init(player1Name: String, player2Name: String) {
+    init(player1Name: String,
+         player2Name: String) {
         self.player1Name = player1Name
         self.player2Name = player2Name
         super.init(nibName: nil, bundle: nil)
@@ -51,18 +52,20 @@ final class TicTacToeViewController: UIViewController, TicTacToePresentable, Tic
         cell?.backgroundColor = playerType.color
     }
 
-    func announce(winner: PlayerType?, withCompletionHandler handler: @escaping () -> Void) {
+    func announce(winner: PlayerType?, withCompletionHandler handler: @escaping () -> ()) {
         let winnerString: String = {
-            switch winner {
-            case .player1:
-                return player1Name + " Won!"
-            case .player2:
-                return player2Name + " Won!"
-            case .none:
-                return "Draw!"
+            if let winner = winner {
+                switch winner {
+                case .player1:
+                    return "\(player1Name) Won!"
+                case .player2:
+                    return "\(player2Name) Won!"
+                }
+            } else {
+                return "It's a Tie"
             }
         }()
-        let alert = UIAlertController(title: "\(winnerString)", message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: winnerString, message: nil, preferredStyle: .alert)
         let closeAction = UIAlertAction(title: "Close Game", style: UIAlertActionStyle.default) { _ in
             handler()
         }
@@ -71,9 +74,9 @@ final class TicTacToeViewController: UIViewController, TicTacToePresentable, Tic
     }
 
     // MARK: - Private
-    
-    private let player1Name: String
+
     private let player2Name: String
+    private let player1Name: String
 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -95,7 +98,7 @@ final class TicTacToeViewController: UIViewController, TicTacToePresentable, Tic
     }
 }
 
-private struct Constants {
+fileprivate struct Constants {
     static let sectionCount = 1
     static let cellSize: CGFloat = UIScreen.main.bounds.width / CGFloat(GameConstants.colCount)
     static let cellIdentifier = "TicTacToeCell"

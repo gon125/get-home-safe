@@ -14,17 +14,8 @@
 //  limitations under the License.
 //
 
-import RIBs
+import RxSwift
 
-/// The dependencies needed from the parent scope of LoggedIn to provide for the OffGame scope.
-// TODO: Update LoggedInDependency protocol to inherit this protocol.
-protocol LoggedInDependencyOffGame: Dependency {
-
-    // TODO: Declare dependencies needed from the parent scope of LoggedIn to provide dependencies
-    // for the OffGame scope.
-}
-
-extension LoggedInComponent: OffGameDependency {
-
-    // TODO: Implement properties to provide for OffGame scope.
+public protocol RootActionableItem: class {
+    func waitForLogin() -> Observable<(LoggedInActionableItem, ())>
 }

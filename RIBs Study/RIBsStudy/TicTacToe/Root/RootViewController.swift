@@ -44,13 +44,38 @@ final class RootViewController: UIViewController, RootPresentable, RootViewContr
 
     // MARK: - RootViewControllable
 
-    func present(viewController: ViewControllable) {
-        present(viewController.uiviewController, animated: true, completion: nil)
+    func replaceModal(viewController: ViewControllable?) {
+        targetViewController = viewController
+
+        guard !animationInProgress else {
+            return
+        }
+
+        if presentedViewController != nil {
+            animationInProgress = true
+            dismiss(animated: true) { [weak self] in
+                if self?.targetViewController != nil {
+                    self?.presentTargetViewController()
+                } else {
+                    self?.animationInProgress = false
+                }
+            }
+        } else {
+            presentTargetViewController()
+        }
     }
 
-    func dismiss(viewController: ViewControllable) {
-        if presentedViewController === viewController.uiviewController {
-            dismiss(animated: true, completion: nil)
+    // MARK: - Private
+
+    private var targetViewController: ViewControllable?
+    private var animationInProgress = false
+
+    private func presentTargetViewController() {
+        if let targetViewController = targetViewController {
+            animationInProgress = true
+            present(targetViewController.uiviewController, animated: true) { [weak self] in
+                self?.animationInProgress = false
+            }
         }
     }
 }

@@ -16,20 +16,38 @@
 
 import RIBs
 
-protocol OffGameInteractable: Interactable {
+protocol OffGameInteractable: Interactable, BasicScoreBoardListener {
     var router: OffGameRouting? { get set }
     var listener: OffGameListener? { get set }
 }
 
 protocol OffGameViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func show(scoreBoardView: ViewControllable)
 }
 
 final class OffGameRouter: ViewableRouter<OffGameInteractable, OffGameViewControllable>, OffGameRouting {
 
-    // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: OffGameInteractable, viewController: OffGameViewControllable) {
+    init(interactor: OffGameInteractable,
+         viewController: OffGameViewControllable,
+         scoreBoardBuilder: BasicScoreBoardBuildable) {
+        self.scoreBoardBuilder = scoreBoardBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
+    }
+
+    override func didLoad() {
+        super.didLoad()
+
+        attachScoreBoard()
+    }
+
+    // MARK: - Private
+
+    private var scoreBoardBuilder: BasicScoreBoardBuildable
+
+    private func attachScoreBoard() {
+        let scoreBoard = scoreBoardBuilder.build(withListener: interactor)
+        attachChild(scoreBoard)
+        viewController.show(scoreBoardView: scoreBoard.viewControllable)
     }
 }

@@ -17,18 +17,18 @@
 import RIBs
 import RxSwift
 
-protocol TicTacToeRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+public protocol TicTacToeRouting: ViewableRouting {
+    // TODO: Delcare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 protocol TicTacToePresentable: Presentable {
     var listener: TicTacToePresentableListener? { get set }
     func setCell(atRow row: Int, col: Int, withPlayerType playerType: PlayerType)
-    func announce(winner: PlayerType?, withCompletionHandler handler: @escaping () -> Void)
+    func announce(winner: PlayerType?, withCompletionHandler handler: @escaping () -> ())
 }
 
-protocol TicTacToeListener: class {
-    func gameDidEnd(withWinner winner: PlayerType?)
+public protocol TicTacToeListener: class {
+    func ticTacToeDidEnd(with winner: PlayerType?)
 }
 
 final class TicTacToeInteractor: PresentableInteractor<TicTacToePresentable>, TicTacToeInteractable, TicTacToePresentableListener {
@@ -37,9 +37,9 @@ final class TicTacToeInteractor: PresentableInteractor<TicTacToePresentable>, Ti
 
     weak var listener: TicTacToeListener?
 
-    // TODO: Add additional dependencies to constructor. Do not perform any logic
-    // in constructor.
-    override init(presenter: TicTacToePresentable) {
+    init(presenter: TicTacToePresentable,
+         mutableScoreStream: MutableScoreStream) {
+        self.mutableScoreStream = mutableScoreStream
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -64,29 +64,26 @@ final class TicTacToeInteractor: PresentableInteractor<TicTacToePresentable>, Ti
 
         let currentPlayer = getAndFlipCurrentPlayer()
         board[row][col] = currentPlayer
-        placedMarkerCount += 1
         presenter.setCell(atRow: row, col: col, withPlayerType: currentPlayer)
 
-        if let (winner) = isgameEnded {
-            presenter.announce(winner: winner) {
-                self.listener?.gameDidEnd(withWinner: winner)
+        let endGame = checkEndGame()
+        if endGame.didEnd {
+            if let winner = endGame.winner {
+                mutableScoreStream.updateScore(with: winner)
+            }
+
+            presenter.announce(winner: endGame.winner) {
+                self.listener?.ticTacToeDidEnd(with: endGame.winner)
             }
         }
     }
 
     // MARK: - Private
 
+    private let mutableScoreStream: MutableScoreStream
+
     private var currentPlayer = PlayerType.player1
     private var board = [[PlayerType?]]()
-    private var placedMarkerCount = 0
-    private var isgameEnded: (PlayerType?)? {
-        let winner = checkWinner()
-        if placedMarkerCount == boardSize || winner != nil {
-            return (winner)
-        }
-        return nil
-    }
-    private let boardSize = GameConstants.colCount*GameConstants.rowCount
 
     private func initBoard() {
         for _ in 0..<GameConstants.rowCount {
@@ -98,6 +95,19 @@ final class TicTacToeInteractor: PresentableInteractor<TicTacToePresentable>, Ti
         let currentPlayer = self.currentPlayer
         self.currentPlayer = currentPlayer == .player1 ? .player2 : .player1
         return currentPlayer
+    }
+
+    private func checkEndGame() -> (winner: PlayerType?, didEnd: Bool) {
+        let winner = checkWinner()
+        if let winner = winner {
+            return (winner, true)
+        }
+        let isDraw = checkDraw()
+        if isDraw {
+            return (nil, true)
+        }
+
+        return (nil, false)
     }
 
     private func checkWinner() -> PlayerType? {
@@ -152,6 +162,17 @@ final class TicTacToeInteractor: PresentableInteractor<TicTacToePresentable>, Ti
         }
 
         return nil
+    }
+
+    private func checkDraw() -> Bool {
+        for row in 0..<GameConstants.rowCount {
+            for col in 0..<GameConstants.colCount {
+                if board[row][col] == nil {
+                    return false
+                }
+            }
+        }
+        return true
     }
 }
 

@@ -16,13 +16,13 @@
 
 import RIBs
 
-protocol TicTacToeDependency: Dependency {
+public protocol RandomWinDependency: Dependency {
     var player1Name: String { get }
     var player2Name: String { get }
     var mutableScoreStream: MutableScoreStream { get }
 }
 
-final class TicTacToeComponent: Component<TicTacToeDependency> {
+final class RandomWinComponent: Component<RandomWinDependency> {
 
     fileprivate var player1Name: String {
         return dependency.player1Name
@@ -39,23 +39,23 @@ final class TicTacToeComponent: Component<TicTacToeDependency> {
 
 // MARK: - Builder
 
-protocol TicTacToeBuildable: Buildable {
-    func build(withListener listener: TicTacToeListener) -> TicTacToeRouting
+protocol RandomWinBuildable: Buildable {
+    func build(withListener listener: RandomWinListener) -> RandomWinRouting
 }
 
-final class TicTacToeBuilder: Builder<TicTacToeDependency>, TicTacToeBuildable {
+public final class RandomWinBuilder: Builder<RandomWinDependency>, RandomWinBuildable {
 
-    override init(dependency: TicTacToeDependency) {
+    public override init(dependency: RandomWinDependency) {
         super.init(dependency: dependency)
     }
 
-    func build(withListener listener: TicTacToeListener) -> TicTacToeRouting {
-        let component = TicTacToeComponent(dependency: dependency)
-        let viewController = TicTacToeViewController(player1Name: component.player1Name,
+    public func build(withListener listener: RandomWinListener) -> RandomWinRouting {
+        let component = RandomWinComponent(dependency: dependency)
+        let viewController = RandomWinViewController(player1Name: component.player1Name,
                                                      player2Name: component.player2Name)
-        let interactor = TicTacToeInteractor(presenter: viewController,
+        let interactor = RandomWinInteractor(presenter: viewController,
                                              mutableScoreStream: component.mutableScoreStream)
         interactor.listener = listener
-        return TicTacToeRouter(interactor: interactor, viewController: viewController)
+        return RandomWinRouter(interactor: interactor, viewController: viewController)
     }
 }

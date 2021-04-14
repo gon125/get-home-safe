@@ -23,11 +23,11 @@ protocol OffGameRouting: ViewableRouting {
 
 protocol OffGamePresentable: Presentable {
     var listener: OffGamePresentableListener? { get set }
-    func set(score: Score)
+    // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
 protocol OffGameListener: class {
-    func startTicTacToe()
+    func startGame(with gameBuilder: GameBuildable)
 }
 
 final class OffGameInteractor: PresentableInteractor<OffGamePresentable>, OffGameInteractable, OffGamePresentableListener {
@@ -38,15 +38,14 @@ final class OffGameInteractor: PresentableInteractor<OffGamePresentable>, OffGam
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    init(presenter: OffGamePresentable, scoreStream: ScoreStream) {
-        self.scoreStream = scoreStream
+    override init(presenter: OffGamePresentable) {
         super.init(presenter: presenter)
         presenter.listener = self
     }
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        updateScore()
+        // TODO: Implement business logic here.
     }
 
     override func willResignActive() {
@@ -56,15 +55,7 @@ final class OffGameInteractor: PresentableInteractor<OffGamePresentable>, OffGam
 
     // MARK: - OffGamePresentableListener
 
-    func startGame() {
-        listener?.startTicTacToe()
-    }
-    
-    // MARK: - Private
-    private let scoreStream: ScoreStream
-    
-    private func updateScore() {
-        scoreStream.score.subscribe { self.presenter.set(score: $0) }.disposeOnDeactivate(interactor: self)
-
+    func start(_ game: Game) {
+        listener?.startGame(with: game.builder)
     }
 }

@@ -76,9 +76,6 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
             }
     }
     
-    
-    
-    
     // MARK: - Private
     private let loggedInActionableItemSubject = ReplaySubject<LoggedInActionableItem>.create(bufferSize: 1)
 }

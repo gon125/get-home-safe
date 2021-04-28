@@ -35,7 +35,6 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable, LoggedInAction
         }
         return Observable.just((self, ()))
     }
-    
 
     weak var router: LoggedInRouting?
     weak var listener: LoggedInListener?

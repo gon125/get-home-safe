@@ -30,7 +30,7 @@ public class LaunchGameWorkflow: Workflow<RootActionableItem> {
         let components = URLComponents(string: url.absoluteString)
         let items = components?.queryItems ?? []
         for item in items {
-            if item.name == "gameId" {
+            where item.name == "gameId" {
                 return item.value
             }
         }

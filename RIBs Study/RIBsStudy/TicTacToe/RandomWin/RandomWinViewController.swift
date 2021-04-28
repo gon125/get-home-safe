@@ -48,7 +48,7 @@ final class RandomWinViewController: UIViewController, RandomWinPresentable, Ran
 
     // MARK: - RandomWinPresentable
 
-    func announce(winner: PlayerType, withCompletionHandler handler: @escaping () -> ()) {
+    func announce(winner: PlayerType, withCompletionHandler handler: @escaping () -> Void) {
         let winnerString: String = {
             switch winner {
             case .player1:

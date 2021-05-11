@@ -1,0 +1,13 @@
+groups:
+  - name: devs # name of the group
+    reviewers: 2 # how many reviewers do you want to assign?
+    usernames: # github usernames of the reviewers
+      - gon125
+      - yeollow
+      - KHyoseon
+
+  # - name: qas # you can have multiple groups, it will evaluate them separately
+  #   reviewers: 1
+  #   usernames:
+  #     - some_user
+  #     - someoneelse

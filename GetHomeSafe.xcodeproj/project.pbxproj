@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AE3551632B1F5B7F6509350 /* Pods_GetHomeSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F4FCD3EBB53A42599755 /* Pods_GetHomeSafe.framework */; };
+		02FC3803BDA7CA4DA5130913 /* Pods_GetHomeSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F4FCD3EBB53A42599755 /* Pods_GetHomeSafe.framework */; };
 		9ED8336007A167943A54CC7E /* Pods_GetHomeSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787BB452E39442B58A51EA34 /* Pods_GetHomeSafeTests.framework */; };
 		F3051035262826DF00D63D64 /* SceneComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3051034262826DF00D63D64 /* SceneComponent.swift */; };
 		F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEAD826297AB500C5444B /* RootComponent+LoggedOut.swift */; };
@@ -16,6 +16,11 @@
 		F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */; };
 		F386055F26397DF700DD5C47 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386055E26397DF700DD5C47 /* State.swift */; };
 		F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */; };
+		F38605642639A48600DD5C47 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605632639A48600DD5C47 /* Error.swift */; };
+		F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605662639A79500DD5C47 /* MapRouter.swift */; };
+		F386056B2639A79500DD5C47 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605672639A79500DD5C47 /* MapViewController.swift */; };
+		F386056C2639A79500DD5C47 /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605682639A79500DD5C47 /* MapBuilder.swift */; };
+		F386056D2639A79500DD5C47 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605692639A79500DD5C47 /* MapInteractor.swift */; };
 		F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259326296B5000C7FC36 /* RootRouter.swift */; };
 		F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259426296B5000C7FC36 /* RootViewController.swift */; };
 		F3BC259926296B5000C7FC36 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259526296B5000C7FC36 /* RootBuilder.swift */; };
@@ -28,6 +33,7 @@
 		F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF76262AC0D000111AB5 /* UseCase.swift */; };
 		F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */; };
 		F3C8FF98262AC83500111AB5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF97262AC83500111AB5 /* Model.swift */; };
+		F3D098F2264A28EE00423207 /* LoggedInComponent+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */; };
 		F3DCC1B5262A9FFB005247C4 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F3DCC1B4262A9FFB005247C4 /* KeychainAccess */; };
 		F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D0262815F700F48F72 /* AppDelegate.swift */; };
 		F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D2262815F700F48F72 /* SceneDelegate.swift */; };
@@ -72,6 +78,11 @@
 		F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		F386055E26397DF700DD5C47 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
+		F38605632639A48600DD5C47 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		F38605662639A79500DD5C47 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		F38605672639A79500DD5C47 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F38605682639A79500DD5C47 /* MapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
+		F38605692639A79500DD5C47 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		F3BC259326296B5000C7FC36 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		F3BC259426296B5000C7FC36 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F3BC259526296B5000C7FC36 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
@@ -84,6 +95,9 @@
 		F3C8FF76262AC0D000111AB5 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationModels+States+Errors.swift"; sourceTree = "<group>"; };
 		F3C8FF97262AC83500111AB5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Map.swift"; sourceTree = "<group>"; };
+		F3E52BC126498F6200438816 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
+		F3E52BC226498F6F00438816 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
 		F3F598CD262815F700F48F72 /* GetHomeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetHomeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F598D0262815F700F48F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F598D2262815F700F48F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,7 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3DCC1B5262A9FFB005247C4 /* KeychainAccess in Frameworks */,
-				1AE3551632B1F5B7F6509350 /* Pods_GetHomeSafe.framework in Frameworks */,
+				02FC3803BDA7CA4DA5130913 /* Pods_GetHomeSafe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,8 +193,20 @@
 				F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */,
 				F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */,
 				F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */,
+				F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */,
 			);
 			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		F38605652639A78200DD5C47 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F38605662639A79500DD5C47 /* MapRouter.swift */,
+				F38605672639A79500DD5C47 /* MapViewController.swift */,
+				F38605682639A79500DD5C47 /* MapBuilder.swift */,
+				F38605692639A79500DD5C47 /* MapInteractor.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		F3C8FF5B262ABC1800111AB5 /* LoggedOut */ = {
@@ -226,6 +252,7 @@
 				F3C8FF76262AC0D000111AB5 /* UseCase.swift */,
 				F3C8FF97262AC83500111AB5 /* Model.swift */,
 				F386055E26397DF700DD5C47 /* State.swift */,
+				F38605632639A48600DD5C47 /* Error.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -233,6 +260,7 @@
 		F3DCC1B9262ABA88005247C4 /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
+				F38605652639A78200DD5C47 /* Map */,
 				F3C8FF5B262ABC1800111AB5 /* LoggedOut */,
 				F33BEAFF262A97D500C5444B /* LoggedIn */,
 				F305100B262825FA00D63D64 /* Root */,
@@ -240,9 +268,19 @@
 			path = RIBs;
 			sourceTree = "<group>";
 		};
+		F3E52BC026498F5500438816 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F3E52BC126498F6200438816 /* debug.xcconfig */,
+				F3E52BC226498F6F00438816 /* release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		F3F598C4262815F700F48F72 = {
 			isa = PBXGroup;
 			children = (
+				F3E52BC026498F5500438816 /* Config */,
 				F3F598CF262815F700F48F72 /* GetHomeSafe */,
 				F3F598E6262815F800F48F72 /* GetHomeSafeTests */,
 				F3F598F1262815F800F48F72 /* GetHomeSafeUITests */,
@@ -300,8 +338,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3F598F7262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafe" */;
 			buildPhases = (
-				F3BC25BF262973E900C7FC36 /* Run SwiftLint */,
 				EE10137B69D0CD5BC956DFE8 /* [CP] Check Pods Manifest.lock */,
+				F3BC25BF262973E900C7FC36 /* Run SwiftLint */,
 				F3F598C9262815F700F48F72 /* Sources */,
 				F3F598CA262815F700F48F72 /* Frameworks */,
 				F3F598CB262815F700F48F72 /* Resources */,
@@ -559,13 +597,19 @@
 				F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */,
 				F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */,
 				F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */,
+				F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */,
 				F386055F26397DF700DD5C47 /* State.swift in Sources */,
 				F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */,
+				F386056D2639A79500DD5C47 /* MapInteractor.swift in Sources */,
+				F386056B2639A79500DD5C47 /* MapViewController.swift in Sources */,
 				F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */,
 				F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */,
 				F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */,
 				F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */,
+				F386056C2639A79500DD5C47 /* MapBuilder.swift in Sources */,
+				F38605642639A48600DD5C47 /* Error.swift in Sources */,
 				F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */,
+				F3D098F2264A28EE00423207 /* LoggedInComponent+Map.swift in Sources */,
 				F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */,
 				F3C8FF60262ABC2800111AB5 /* LoggedOutRouter.swift in Sources */,
 				F3051035262826DF00D63D64 /* SceneComponent.swift in Sources */,
@@ -624,7 +668,9 @@
 /* Begin XCBuildConfiguration section */
 		F3F598F5262815F800F48F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3E52BC126498F6200438816 /* debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -659,6 +705,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -673,10 +720,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -685,7 +732,9 @@
 		};
 		F3F598F6262815F800F48F72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3E52BC226498F6F00438816 /* release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -720,6 +769,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -728,9 +778,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -742,10 +793,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ADAC4ACAFE6CA780C6E6934 /* Pods-GetHomeSafe.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GetHomeSafe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -763,10 +817,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D6C04E1238EFE0DA9858256 /* Pods-GetHomeSafe.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GetHomeSafe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -878,7 +935,7 @@
 				F3F598F6262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3F598F7262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafe" */ = {
 			isa = XCConfigurationList;
@@ -887,7 +944,7 @@
 				F3F598F9262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3F598FA262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafeTests" */ = {
 			isa = XCConfigurationList;
@@ -896,7 +953,7 @@
 				F3F598FC262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3F598FD262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafeUITests" */ = {
 			isa = XCConfigurationList;
@@ -905,7 +962,7 @@
 				F3F598FF262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

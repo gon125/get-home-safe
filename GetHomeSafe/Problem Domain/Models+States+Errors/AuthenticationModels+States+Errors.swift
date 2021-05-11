@@ -18,11 +18,11 @@ enum SignupState: State {
     case failed(SignupError)
 }
 
-enum SignupError: Error {
+enum SignupError: CustomError {
     case invalidPassword(PasswordError)
     case externalError(String)
     
-    enum PasswordError: Error {
+    enum PasswordError: CustomError {
         case empty
         case noMatch
         case notStrongEnough
@@ -40,7 +40,7 @@ enum LoginState: State {
     case failed(LoginError)
 }
 
-enum LoginError: Error {
+enum LoginError: CustomError {
     case invalidUsername
     case invalidPassword
     case externalError(String)

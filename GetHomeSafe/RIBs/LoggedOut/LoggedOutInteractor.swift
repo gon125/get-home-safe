@@ -23,8 +23,10 @@ protocol LoggedOutListener: AnyObject {
 
 final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, LoggedOutInteractable, LoggedOutPresentableListener {
     
-    func login(withLoginModel: LoginModel) {
-        
+    func login(withLoginModel loginModel: LoginModel) {
+        authenticationUseCase.login(loginModel)
+            .subscribe(onNext: { [weak self] in if $0 == .success { self?.listener?.didLogin() } })
+            .disposed(by: disposeBag)
     }
 
     weak var router: LoggedOutRouting?
@@ -40,11 +42,6 @@ final class LoggedOutInteractor: PresentableInteractor<LoggedOutPresentable>, Lo
 
     override func didBecomeActive() {
         super.didBecomeActive()
-        authenticationUseCase.isLoggedIn()
-            .subscribe(onNext: { if $0 == true { self.listener?.didLogin() }})
-            .disposed(by: disposeBag)
-
-        // TODO: Implement business logic here.
     }
 
     override func willResignActive() {

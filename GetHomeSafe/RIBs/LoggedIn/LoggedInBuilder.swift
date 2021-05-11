@@ -39,7 +39,8 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
     func build(withListener listener: LoggedInListener) -> LoggedInRouting {
         let component = LoggedInComponent(dependency: dependency)
         let interactor = LoggedInInteractor()
+        let mapBuilder = MapBuilder(dependency: component)
         interactor.listener = listener
-        return LoggedInRouter(interactor: interactor, viewController: component.LoggedInViewController)
+        return LoggedInRouter(interactor: interactor, viewController: component.LoggedInViewController, mapBuilder: mapBuilder)
     }
 }

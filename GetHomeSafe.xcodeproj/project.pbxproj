@@ -14,6 +14,7 @@
 		F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */; };
 		F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */; };
 		F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */; };
+		F341C03C264B9F8B00639C13 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C03B264B9F8B00639C13 /* Location.swift */; };
 		F386055F26397DF700DD5C47 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386055E26397DF700DD5C47 /* State.swift */; };
 		F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */; };
 		F38605642639A48600DD5C47 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605632639A48600DD5C47 /* Error.swift */; };
@@ -25,6 +26,8 @@
 		F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259426296B5000C7FC36 /* RootViewController.swift */; };
 		F3BC259926296B5000C7FC36 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259526296B5000C7FC36 /* RootBuilder.swift */; };
 		F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259626296B5000C7FC36 /* RootInteractor.swift */; };
+		F3C3162D264B80DD007177E4 /* CCTVUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */; };
+		F3C3162F264B833D007177E4 /* CCTVModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */; };
 		F3C8FF60262ABC2800111AB5 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */; };
 		F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */; };
 		F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */; };
@@ -76,6 +79,7 @@
 		F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
 		F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
 		F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		F341C03B264B9F8B00639C13 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		F386055E26397DF700DD5C47 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
 		F38605632639A48600DD5C47 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 		F3BC259426296B5000C7FC36 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F3BC259526296B5000C7FC36 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		F3BC259626296B5000C7FC36 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTVUseCase.swift; sourceTree = "<group>"; };
+		F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CCTVModels+States+Errors.swift"; sourceTree = "<group>"; };
 		F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
 		F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
 		F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				F3C8FF6D262ABD9A00111AB5 /* AuthenticationUseCase.swift */,
+				F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */,
+				F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */,
 			);
 			path = "Models+States+Errors";
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 				F3C8FF97262AC83500111AB5 /* Model.swift */,
 				F386055E26397DF700DD5C47 /* State.swift */,
 				F38605632639A48600DD5C47 /* Error.swift */,
+				F341C03B264B9F8B00639C13 /* Location.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -594,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */,
+				F3C3162D264B80DD007177E4 /* CCTVUseCase.swift in Sources */,
 				F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */,
 				F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */,
 				F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */,
@@ -612,7 +622,9 @@
 				F3D098F2264A28EE00423207 /* LoggedInComponent+Map.swift in Sources */,
 				F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */,
 				F3C8FF60262ABC2800111AB5 /* LoggedOutRouter.swift in Sources */,
+				F3C3162F264B833D007177E4 /* CCTVModels+States+Errors.swift in Sources */,
 				F3051035262826DF00D63D64 /* SceneComponent.swift in Sources */,
+				F341C03C264B9F8B00639C13 /* Location.swift in Sources */,
 				F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */,
 				F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */,
 				F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */,

@@ -1,0 +1,22 @@
+//
+//  CCTVUseCase.swift
+//  GetHomeSafe
+//
+//  Created by Geonhyeong LIm on 2021/05/12.
+//
+
+import Foundation
+import Combine
+
+protocol CCTVUseCase {
+    func getCCTVs(near currentLocation: Location) -> AnyPublisher<[CCTV], Never>
+}
+
+#if DEBUG
+struct StubCCTVUseCase: CCTVUseCase {
+    func getCCTVs(near currentLocation: Location) -> AnyPublisher<[CCTV], Never> {
+        let cctvs: [CCTV] = [.init(coordinate: currentLocation.coordinate)]
+        return Just(cctvs).eraseToAnyPublisher()
+    }
+}
+#endif

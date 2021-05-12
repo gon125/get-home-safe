@@ -19,17 +19,17 @@ protocol AuthenticationUseCase: UseCase {
 final class StubAuthenticationUseCase: AuthenticationUseCase {
     
     func signup(_ model: SignupModel) -> Observable<SignupState> {
-        Observable.of(SignupState.success)
+        Observable.just(SignupState.success)
     }
     
     func login(_ model: LoginModel) -> Observable<LoginState> {
-        Observable.of(LoginState.success)
+        Observable.just(LoginState.success)
     }
     
     func logout() { }
     
     func isLoggedIn() -> Observable<Bool> {
-        Observable.of(true)
+        Observable.just(true)
     }
 }
 #endif

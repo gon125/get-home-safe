@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct CCTV: Location {
+struct CCTV: Locationable, Identifiable, Equatable {
+    var id: String { "\(coordinate.latitude)\(coordinate.longitude)" }
     let coordinate: Coordinate2D
 }

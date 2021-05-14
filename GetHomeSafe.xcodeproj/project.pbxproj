@@ -15,6 +15,13 @@
 		F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */; };
 		F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */; };
 		F341C03C264B9F8B00639C13 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C03B264B9F8B00639C13 /* Location.swift */; };
+		F341C045264BA5E800639C13 /* FloatingActionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C041264BA5E800639C13 /* FloatingActionsRouter.swift */; };
+		F341C046264BA5E800639C13 /* FloatingActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C042264BA5E800639C13 /* FloatingActionsViewController.swift */; };
+		F341C047264BA5E800639C13 /* FloatingActionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C043264BA5E800639C13 /* FloatingActionsBuilder.swift */; };
+		F341C048264BA5E800639C13 /* FloatingActionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C044264BA5E800639C13 /* FloatingActionsInteractor.swift */; };
+		F341C04C264C05A600639C13 /* UIToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04B264C05A600639C13 /* UIToggleButton.swift */; };
+		F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */; };
+		F341C050264CE47C00639C13 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04F264CE47C00639C13 /* MapViewModel.swift */; };
 		F386055F26397DF700DD5C47 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386055E26397DF700DD5C47 /* State.swift */; };
 		F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */; };
 		F38605642639A48600DD5C47 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605632639A48600DD5C47 /* Error.swift */; };
@@ -80,6 +87,13 @@
 		F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
 		F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		F341C03B264B9F8B00639C13 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F341C041264BA5E800639C13 /* FloatingActionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsRouter.swift; sourceTree = "<group>"; };
+		F341C042264BA5E800639C13 /* FloatingActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsViewController.swift; sourceTree = "<group>"; };
+		F341C043264BA5E800639C13 /* FloatingActionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsBuilder.swift; sourceTree = "<group>"; };
+		F341C044264BA5E800639C13 /* FloatingActionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsInteractor.swift; sourceTree = "<group>"; };
+		F341C04B264C05A600639C13 /* UIToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToggleButton.swift; sourceTree = "<group>"; };
+		F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapComponent+FloatingActions.swift"; sourceTree = "<group>"; };
+		F341C04F264CE47C00639C13 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		F386055E26397DF700DD5C47 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
 		F38605632639A48600DD5C47 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -204,13 +218,42 @@
 			path = LoggedIn;
 			sourceTree = "<group>";
 		};
+		F341C040264BA5B100639C13 /* FloatingActions */ = {
+			isa = PBXGroup;
+			children = (
+				F341C041264BA5E800639C13 /* FloatingActionsRouter.swift */,
+				F341C042264BA5E800639C13 /* FloatingActionsViewController.swift */,
+				F341C043264BA5E800639C13 /* FloatingActionsBuilder.swift */,
+				F341C044264BA5E800639C13 /* FloatingActionsInteractor.swift */,
+			);
+			path = FloatingActions;
+			sourceTree = "<group>";
+		};
+		F341C049264C059200639C13 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F341C04A264C059700639C13 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F341C04A264C059700639C13 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F341C04B264C05A600639C13 /* UIToggleButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F38605652639A78200DD5C47 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				F38605662639A79500DD5C47 /* MapRouter.swift */,
 				F38605672639A79500DD5C47 /* MapViewController.swift */,
 				F38605682639A79500DD5C47 /* MapBuilder.swift */,
+				F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */,
 				F38605692639A79500DD5C47 /* MapInteractor.swift */,
+				F341C04F264CE47C00639C13 /* MapViewModel.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -269,6 +312,7 @@
 		F3DCC1B9262ABA88005247C4 /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
+				F341C040264BA5B100639C13 /* FloatingActions */,
 				F38605652639A78200DD5C47 /* Map */,
 				F3C8FF5B262ABC1800111AB5 /* LoggedOut */,
 				F33BEAFF262A97D500C5444B /* LoggedIn */,
@@ -314,6 +358,7 @@
 			children = (
 				F3C8FF6A262ABC4A00111AB5 /* Problem Domain */,
 				F3DCC1B9262ABA88005247C4 /* RIBs */,
+				F341C049264C059200639C13 /* UI */,
 				F30510182628264000D63D64 /* App */,
 				F3F598D9262815F800F48F72 /* Assets.xcassets */,
 				F3F598DB262815F800F48F72 /* LaunchScreen.storyboard */,
@@ -608,14 +653,21 @@
 				F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */,
 				F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */,
 				F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */,
+				F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */,
 				F386055F26397DF700DD5C47 /* State.swift in Sources */,
 				F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */,
 				F386056D2639A79500DD5C47 /* MapInteractor.swift in Sources */,
 				F386056B2639A79500DD5C47 /* MapViewController.swift in Sources */,
 				F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */,
 				F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */,
+				F341C04C264C05A600639C13 /* UIToggleButton.swift in Sources */,
 				F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */,
+				F341C045264BA5E800639C13 /* FloatingActionsRouter.swift in Sources */,
+				F341C047264BA5E800639C13 /* FloatingActionsBuilder.swift in Sources */,
+				F341C048264BA5E800639C13 /* FloatingActionsInteractor.swift in Sources */,
 				F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */,
+				F341C050264CE47C00639C13 /* MapViewModel.swift in Sources */,
+				F341C046264BA5E800639C13 /* FloatingActionsViewController.swift in Sources */,
 				F386056C2639A79500DD5C47 /* MapBuilder.swift in Sources */,
 				F38605642639A48600DD5C47 /* Error.swift in Sources */,
 				F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */,

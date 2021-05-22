@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		1AE3551632B1F5B7F6509350 /* Pods_GetHomeSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F4FCD3EBB53A42599755 /* Pods_GetHomeSafe.framework */; };
 		9ED8336007A167943A54CC7E /* Pods_GetHomeSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787BB452E39442B58A51EA34 /* Pods_GetHomeSafeTests.framework */; };
+		A26E6AFC2658F1E2001C214A /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE12658F1E2001C214A /* LoggedInBuilder.swift */; };
+		A26E6AFD2658F1E2001C214A /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE22658F1E2001C214A /* LoggedInRouter.swift */; };
+		A26E6AFE2658F1E2001C214A /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE32658F1E2001C214A /* LoggedInInteractor.swift */; };
+		A26E6AFF2658F1E2001C214A /* LoggedInComponent+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE42658F1E2001C214A /* LoggedInComponent+Map.swift */; };
+		A26E6B002658F1E2001C214A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE62658F1E2001C214A /* SignUpViewController.swift */; };
+		A26E6B012658F1E2001C214A /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE72658F1E2001C214A /* SignUpRouter.swift */; };
+		A26E6B022658F1E2001C214A /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE82658F1E2001C214A /* SignUpInteractor.swift */; };
+		A26E6B032658F1E2001C214A /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE92658F1E2001C214A /* SignUpBuilder.swift */; };
+		A26E6B042658F1E2001C214A /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AEB2658F1E2001C214A /* MapRouter.swift */; };
+		A26E6B052658F1E3001C214A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AEC2658F1E2001C214A /* MapInteractor.swift */; };
+		A26E6B062658F1E3001C214A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AED2658F1E2001C214A /* MapViewController.swift */; };
+		A26E6B072658F1E3001C214A /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AEE2658F1E2001C214A /* MapBuilder.swift */; };
+		A26E6B082658F1E3001C214A /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF02658F1E2001C214A /* LoggedOutViewController.swift */; };
+		A26E6B092658F1E3001C214A /* LoggedOutComponent+SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF12658F1E2001C214A /* LoggedOutComponent+SignUp.swift */; };
+		A26E6B0A2658F1E3001C214A /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF22658F1E2001C214A /* LoggedOutInteractor.swift */; };
+		A26E6B0B2658F1E3001C214A /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF32658F1E2001C214A /* LoggedOutBuilder.swift */; };
+		A26E6B0C2658F1E3001C214A /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF42658F1E2001C214A /* LoggedOutRouter.swift */; };
+		A26E6B0D2658F1E3001C214A /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF62658F1E2001C214A /* RootComponent+LoggedOut.swift */; };
+		A26E6B0E2658F1E3001C214A /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF72658F1E2001C214A /* RootInteractor.swift */; };
+		A26E6B0F2658F1E3001C214A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF82658F1E2001C214A /* RootViewController.swift */; };
+		A26E6B102658F1E3001C214A /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF92658F1E2001C214A /* RootComponent+LoggedIn.swift */; };
+		A26E6B112658F1E3001C214A /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AFA2658F1E2001C214A /* RootRouter.swift */; };
+		A26E6B122658F1E3001C214A /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AFB2658F1E2001C214A /* RootBuilder.swift */; };
 		F3051035262826DF00D63D64 /* SceneComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3051034262826DF00D63D64 /* SceneComponent.swift */; };
-		F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEAD826297AB500C5444B /* RootComponent+LoggedOut.swift */; };
-		F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */; };
-		F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */; };
-		F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */; };
 		F386055F26397DF700DD5C47 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386055E26397DF700DD5C47 /* State.swift */; };
-		F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */; };
-		F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259326296B5000C7FC36 /* RootRouter.swift */; };
-		F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259426296B5000C7FC36 /* RootViewController.swift */; };
-		F3BC259926296B5000C7FC36 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259526296B5000C7FC36 /* RootBuilder.swift */; };
-		F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259626296B5000C7FC36 /* RootInteractor.swift */; };
-		F3C8FF60262ABC2800111AB5 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */; };
-		F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */; };
-		F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */; };
-		F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5F262ABC2800111AB5 /* LoggedOutInteractor.swift */; };
 		F3C8FF6E262ABD9A00111AB5 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF6D262ABD9A00111AB5 /* AuthenticationUseCase.swift */; };
 		F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF76262AC0D000111AB5 /* UseCase.swift */; };
 		F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */; };
@@ -63,23 +73,33 @@
 		574ED229EC7B176A77908089 /* Pods-GetHomeSafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetHomeSafeTests.debug.xcconfig"; path = "Target Support Files/Pods-GetHomeSafeTests/Pods-GetHomeSafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		787BB452E39442B58A51EA34 /* Pods_GetHomeSafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetHomeSafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6C04E1238EFE0DA9858256 /* Pods-GetHomeSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetHomeSafe.release.xcconfig"; path = "Target Support Files/Pods-GetHomeSafe/Pods-GetHomeSafe.release.xcconfig"; sourceTree = "<group>"; };
+		A26E6AE12658F1E2001C214A /* LoggedInBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		A26E6AE22658F1E2001C214A /* LoggedInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		A26E6AE32658F1E2001C214A /* LoggedInInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		A26E6AE42658F1E2001C214A /* LoggedInComponent+Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Map.swift"; sourceTree = "<group>"; };
+		A26E6AE62658F1E2001C214A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A26E6AE72658F1E2001C214A /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
+		A26E6AE82658F1E2001C214A /* SignUpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		A26E6AE92658F1E2001C214A /* SignUpBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
+		A26E6AEB2658F1E2001C214A /* MapRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		A26E6AEC2658F1E2001C214A /* MapInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		A26E6AED2658F1E2001C214A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A26E6AEE2658F1E2001C214A /* MapBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
+		A26E6AF02658F1E2001C214A /* LoggedOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		A26E6AF12658F1E2001C214A /* LoggedOutComponent+SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedOutComponent+SignUp.swift"; sourceTree = "<group>"; };
+		A26E6AF22658F1E2001C214A /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
+		A26E6AF32658F1E2001C214A /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		A26E6AF42658F1E2001C214A /* LoggedOutRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		A26E6AF62658F1E2001C214A /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		A26E6AF72658F1E2001C214A /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		A26E6AF82658F1E2001C214A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		A26E6AF92658F1E2001C214A /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
+		A26E6AFA2658F1E2001C214A /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		A26E6AFB2658F1E2001C214A /* RootBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		AA0379B6BA4CCE5EB2A5EF7C /* Pods_GetHomeSafe_GetHomeSafeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetHomeSafe_GetHomeSafeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B506F4FCD3EBB53A42599755 /* Pods_GetHomeSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetHomeSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3051034262826DF00D63D64 /* SceneComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneComponent.swift; sourceTree = "<group>"; };
-		F33BEAD826297AB500C5444B /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
-		F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
-		F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
-		F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
 		F386055E26397DF700DD5C47 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
-		F3BC259326296B5000C7FC36 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
-		F3BC259426296B5000C7FC36 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		F3BC259526296B5000C7FC36 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
-		F3BC259626296B5000C7FC36 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
-		F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
-		F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
-		F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
-		F3C8FF5F262ABC2800111AB5 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 		F3C8FF6D262ABD9A00111AB5 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		F3C8FF76262AC0D000111AB5 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationModels+States+Errors.swift"; sourceTree = "<group>"; };
@@ -137,6 +157,64 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A26E6AE02658F1E2001C214A /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				A26E6AE12658F1E2001C214A /* LoggedInBuilder.swift */,
+				A26E6AE22658F1E2001C214A /* LoggedInRouter.swift */,
+				A26E6AE32658F1E2001C214A /* LoggedInInteractor.swift */,
+				A26E6AE42658F1E2001C214A /* LoggedInComponent+Map.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		A26E6AE52658F1E2001C214A /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				A26E6AE62658F1E2001C214A /* SignUpViewController.swift */,
+				A26E6AE72658F1E2001C214A /* SignUpRouter.swift */,
+				A26E6AE82658F1E2001C214A /* SignUpInteractor.swift */,
+				A26E6AE92658F1E2001C214A /* SignUpBuilder.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A26E6AEA2658F1E2001C214A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A26E6AEB2658F1E2001C214A /* MapRouter.swift */,
+				A26E6AEC2658F1E2001C214A /* MapInteractor.swift */,
+				A26E6AED2658F1E2001C214A /* MapViewController.swift */,
+				A26E6AEE2658F1E2001C214A /* MapBuilder.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A26E6AEF2658F1E2001C214A /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				A26E6AF02658F1E2001C214A /* LoggedOutViewController.swift */,
+				A26E6AF12658F1E2001C214A /* LoggedOutComponent+SignUp.swift */,
+				A26E6AF22658F1E2001C214A /* LoggedOutInteractor.swift */,
+				A26E6AF32658F1E2001C214A /* LoggedOutBuilder.swift */,
+				A26E6AF42658F1E2001C214A /* LoggedOutRouter.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		A26E6AF52658F1E2001C214A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A26E6AF62658F1E2001C214A /* RootComponent+LoggedOut.swift */,
+				A26E6AF72658F1E2001C214A /* RootInteractor.swift */,
+				A26E6AF82658F1E2001C214A /* RootViewController.swift */,
+				A26E6AF92658F1E2001C214A /* RootComponent+LoggedIn.swift */,
+				A26E6AFA2658F1E2001C214A /* RootRouter.swift */,
+				A26E6AFB2658F1E2001C214A /* RootBuilder.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		AB1787B9BF25548B9B6DEA48 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,19 +228,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F305100B262825FA00D63D64 /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				F3BC259326296B5000C7FC36 /* RootRouter.swift */,
-				F3BC259426296B5000C7FC36 /* RootViewController.swift */,
-				F3BC259526296B5000C7FC36 /* RootBuilder.swift */,
-				F3BC259626296B5000C7FC36 /* RootInteractor.swift */,
-				F33BEAD826297AB500C5444B /* RootComponent+LoggedOut.swift */,
-				F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
 		F30510182628264000D63D64 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,27 +236,6 @@
 				F3051034262826DF00D63D64 /* SceneComponent.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		F33BEAFF262A97D500C5444B /* LoggedIn */ = {
-			isa = PBXGroup;
-			children = (
-				F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */,
-				F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */,
-				F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */,
-			);
-			path = LoggedIn;
-			sourceTree = "<group>";
-		};
-		F3C8FF5B262ABC1800111AB5 /* LoggedOut */ = {
-			isa = PBXGroup;
-			children = (
-				F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */,
-				F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */,
-				F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */,
-				F3C8FF5F262ABC2800111AB5 /* LoggedOutInteractor.swift */,
-			);
-			path = LoggedOut;
 			sourceTree = "<group>";
 		};
 		F3C8FF6A262ABC4A00111AB5 /* Problem Domain */ = {
@@ -233,9 +277,11 @@
 		F3DCC1B9262ABA88005247C4 /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
-				F3C8FF5B262ABC1800111AB5 /* LoggedOut */,
-				F33BEAFF262A97D500C5444B /* LoggedIn */,
-				F305100B262825FA00D63D64 /* Root */,
+				A26E6AE02658F1E2001C214A /* LoggedIn */,
+				A26E6AEF2658F1E2001C214A /* LoggedOut */,
+				A26E6AEA2658F1E2001C214A /* Map */,
+				A26E6AF52658F1E2001C214A /* Root */,
+				A26E6AE52658F1E2001C214A /* SignUp */,
 			);
 			path = RIBs;
 			sourceTree = "<group>";
@@ -300,8 +346,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3F598F7262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafe" */;
 			buildPhases = (
-				F3BC25BF262973E900C7FC36 /* Run SwiftLint */,
 				EE10137B69D0CD5BC956DFE8 /* [CP] Check Pods Manifest.lock */,
+				F3BC25BF262973E900C7FC36 /* Run SwiftLint */,
 				F3F598C9262815F700F48F72 /* Sources */,
 				F3F598CA262815F700F48F72 /* Frameworks */,
 				F3F598CB262815F700F48F72 /* Resources */,
@@ -555,26 +601,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */,
-				F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */,
-				F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */,
-				F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */,
 				F386055F26397DF700DD5C47 /* State.swift in Sources */,
-				F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */,
-				F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */,
-				F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */,
+				A26E6B122658F1E3001C214A /* RootBuilder.swift in Sources */,
+				A26E6B102658F1E3001C214A /* RootComponent+LoggedIn.swift in Sources */,
+				A26E6B0C2658F1E3001C214A /* LoggedOutRouter.swift in Sources */,
+				A26E6AFD2658F1E2001C214A /* LoggedInRouter.swift in Sources */,
+				A26E6B0B2658F1E3001C214A /* LoggedOutBuilder.swift in Sources */,
+				A26E6B012658F1E2001C214A /* SignUpRouter.swift in Sources */,
 				F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */,
+				A26E6B042658F1E2001C214A /* MapRouter.swift in Sources */,
+				A26E6AFE2658F1E2001C214A /* LoggedInInteractor.swift in Sources */,
 				F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */,
-				F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */,
+				A26E6B062658F1E3001C214A /* MapViewController.swift in Sources */,
+				A26E6B0F2658F1E3001C214A /* RootViewController.swift in Sources */,
 				F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */,
-				F3C8FF60262ABC2800111AB5 /* LoggedOutRouter.swift in Sources */,
+				A26E6AFC2658F1E2001C214A /* LoggedInBuilder.swift in Sources */,
+				A26E6B052658F1E3001C214A /* MapInteractor.swift in Sources */,
+				A26E6AFF2658F1E2001C214A /* LoggedInComponent+Map.swift in Sources */,
+				A26E6B112658F1E3001C214A /* RootRouter.swift in Sources */,
+				A26E6B072658F1E3001C214A /* MapBuilder.swift in Sources */,
+				A26E6B0E2658F1E3001C214A /* RootInteractor.swift in Sources */,
 				F3051035262826DF00D63D64 /* SceneComponent.swift in Sources */,
-				F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */,
-				F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */,
 				F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */,
-				F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */,
-				F3BC259926296B5000C7FC36 /* RootBuilder.swift in Sources */,
+				A26E6B032658F1E2001C214A /* SignUpBuilder.swift in Sources */,
+				A26E6B092658F1E3001C214A /* LoggedOutComponent+SignUp.swift in Sources */,
+				A26E6B0A2658F1E3001C214A /* LoggedOutInteractor.swift in Sources */,
+				A26E6B0D2658F1E3001C214A /* RootComponent+LoggedOut.swift in Sources */,
 				F3C8FF98262AC83500111AB5 /* Model.swift in Sources */,
+				A26E6B002658F1E2001C214A /* SignUpViewController.swift in Sources */,
+				A26E6B022658F1E2001C214A /* SignUpInteractor.swift in Sources */,
+				A26E6B082658F1E3001C214A /* LoggedOutViewController.swift in Sources */,
 				F3C8FF6E262ABD9A00111AB5 /* AuthenticationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -830,7 +886,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47D7D65B5394D681FEED57AD /* Pods-GetHomeSafe-GetHomeSafeUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
 				INFOPLIST_FILE = GetHomeSafeUITests/Info.plist;
@@ -851,7 +907,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34B65B1E2D7978ABC5162384 /* Pods-GetHomeSafe-GetHomeSafeUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
 				INFOPLIST_FILE = GetHomeSafeUITests/Info.plist;

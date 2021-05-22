@@ -7,7 +7,7 @@
 
 import RIBs
 
-protocol LoggedInInteractable: Interactable, MapListener {
+protocol LoggedInInteractable: Interactable/*, MapListener*/ {
     var router: LoggedInRouting? { get set }
     var listener: LoggedInListener? { get set }
 }
@@ -20,16 +20,16 @@ protocol LoggedInViewControllable: ViewControllable {
 final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    init(interactor: LoggedInInteractable, viewController: LoggedInViewControllable, mapBuilder: MapBuildable) {
+    init(interactor: LoggedInInteractable, viewController: LoggedInViewControllable/*, mapBuilder: MapBuildable*/) {
         self.viewController = viewController
-        self.mapBuilder = mapBuilder
+//        self.mapBuilder = mapBuilder
         super.init(interactor: interactor)
         interactor.router = self
     }
 
     override func didLoad() {
         super.didLoad()
-        attachMap()
+//        attachMap()
     }
 
     func cleanupViews() {
@@ -40,19 +40,19 @@ final class LoggedInRouter: Router<LoggedInInteractable>, LoggedInRouting {
 
     func routeToMap() {
         detachCurrentChild()
-        attachMap()
+//        attachMap()
     }
 
     private var currentChild: ViewableRouting?
     private let viewController: LoggedInViewControllable
-    private let mapBuilder: MapBuildable
+//    private let mapBuilder: MapBuildable
 
-    private func attachMap() {
-        let map = mapBuilder.build(withListener: interactor)
-        self.currentChild = map
-        attachChild(map)
-        viewController.present(viewController: map.viewControllable)
-    }
+//    private func attachMap() {
+//        let map = mapBuilder.build(withListener: interactor)
+//        self.currentChild = map
+//        attachChild(map)
+//        viewController.present(viewController: map.viewControllable)
+//    }
 
     private func detachCurrentChild() {
         if let currentChild = currentChild {

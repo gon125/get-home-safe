@@ -7,20 +7,33 @@
 
 import RIBs
 
-protocol MapInteractable: Interactable {
+protocol MapInteractable: Interactable, FloatingActionsListener {
     var router: MapRouting? { get set }
     var listener: MapListener? { get set }
 }
 
 protocol MapViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    func show(floatingActionsView: ViewControllable)
 }
 
 final class MapRouter: ViewableRouter<MapInteractable, MapViewControllable>, MapRouting {
+    
+    // MARK: - MapRouting
+    func routeToFloatingActions() {
+        let floatingActions = floatingActionsBuilder.build(withListener: interactor)
+        attachChild(floatingActions)
+        viewController.show(floatingActionsView: floatingActions.viewControllable)
+    }
 
     // TODO: Constructor inject child builder protocols to allow building children.
-    override init(interactor: MapInteractable, viewController: MapViewControllable) {
+    init(interactor: MapInteractable,
+         viewController: MapViewControllable,
+         floatingActionsBuilder: FloatingActionsBuildable) {
+        self.floatingActionsBuilder = floatingActionsBuilder
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
+    
+    // MARK: - Private
+    private let floatingActionsBuilder: FloatingActionsBuildable
 }

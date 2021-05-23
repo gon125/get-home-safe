@@ -116,8 +116,8 @@
 		F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationModels+States+Errors.swift"; sourceTree = "<group>"; };
 		F3C8FF97262AC83500111AB5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Map.swift"; sourceTree = "<group>"; };
-		F3E52BC126498F6200438816 /* debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = debug.xcconfig; sourceTree = "<group>"; };
-		F3E52BC226498F6F00438816 /* release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = release.xcconfig; sourceTree = "<group>"; };
+		F3DF55BE265A2EB000D03375 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		F3DF55BF265A300200D03375 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		F3F598CD262815F700F48F72 /* GetHomeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetHomeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F598D0262815F700F48F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F598D2262815F700F48F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -249,11 +249,11 @@
 			isa = PBXGroup;
 			children = (
 				F38605662639A79500DD5C47 /* MapRouter.swift */,
+				F38605692639A79500DD5C47 /* MapInteractor.swift */,
+				F341C04F264CE47C00639C13 /* MapViewModel.swift */,
 				F38605672639A79500DD5C47 /* MapViewController.swift */,
 				F38605682639A79500DD5C47 /* MapBuilder.swift */,
 				F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */,
-				F38605692639A79500DD5C47 /* MapInteractor.swift */,
-				F341C04F264CE47C00639C13 /* MapViewModel.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -321,11 +321,11 @@
 			path = RIBs;
 			sourceTree = "<group>";
 		};
-		F3E52BC026498F5500438816 /* Config */ = {
+		F3DF55BD265A2E9500D03375 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				F3E52BC126498F6200438816 /* debug.xcconfig */,
-				F3E52BC226498F6F00438816 /* release.xcconfig */,
+				F3DF55BE265A2EB000D03375 /* Debug.xcconfig */,
+				F3DF55BF265A300200D03375 /* Release.xcconfig */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 		F3F598C4262815F700F48F72 = {
 			isa = PBXGroup;
 			children = (
-				F3E52BC026498F5500438816 /* Config */,
+				F3DF55BD265A2E9500D03375 /* Config */,
 				F3F598CF262815F700F48F72 /* GetHomeSafe */,
 				F3F598E6262815F800F48F72 /* GetHomeSafeTests */,
 				F3F598F1262815F800F48F72 /* GetHomeSafeUITests */,
@@ -732,7 +732,7 @@
 /* Begin XCBuildConfiguration section */
 		F3F598F5262815F800F48F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3E52BC126498F6200438816 /* debug.xcconfig */;
+			baseConfigurationReference = F3DF55BE265A2EB000D03375 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -796,7 +796,7 @@
 		};
 		F3F598F6262815F800F48F72 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3E52BC226498F6F00438816 /* release.xcconfig */;
+			baseConfigurationReference = F3DF55BF265A300200D03375 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;

@@ -6,15 +6,25 @@
 //
 
 import RIBs
-import RxSwift
+import NMapsMap
+import Combine
 
 protocol MapRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    func routeToFloatingActions()
 }
 
 protocol MapPresentable: Presentable {
     var listener: MapPresentableListener? { get set }
-    // TODO: Declare methods the interactor can invoke the presenter to present data.
+    func placeCCTVMarkers(with cctvs: [CCTV])
+    var currentCameraLocation: Location? { get }
+    
+    func showCCTVMarkers()
+    func dismissCCTVMarkers()
+    func showPoliceStationMarkers()
+    func dismissPoliceStationMarkers()
+    func showHotPlaceMarkers()
+    func dismissHotPlaceMarkers()
+    
 }
 
 protocol MapListener: class {
@@ -22,24 +32,78 @@ protocol MapListener: class {
 }
 
 final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractable, MapPresentableListener {
-
+    func cameraLocationChanged() {
+        guard let currentCameraLocation = presenter.currentCameraLocation else { return }
+            cctvUseCase.getCCTVs(near: currentCameraLocation).sink { [weak self] cctvs in
+                self?.presenter.placeCCTVMarkers(with: cctvs)
+            }.store(in: &cancelBag)
+    }
+    
     weak var router: MapRouting?
     weak var listener: MapListener?
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    override init(presenter: MapPresentable) {
+    init(presenter: MapPresentable, cctvUseCase: CCTVUseCase) {
+        self.cctvUseCase = cctvUseCase
         super.init(presenter: presenter)
         presenter.listener = self
     }
 
     override func didBecomeActive() {
         super.didBecomeActive()
+        router?.routeToFloatingActions()
         // TODO: Implement business logic here.
     }
 
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    
+    // MARK: - FloatingActionsListener
+    func showCCTVMarkers() {
+        presenter.showCCTVMarkers()
+    }
+    func dismissCCTVMarkers() {
+        presenter.dismissCCTVMarkers()
+    }
+    
+    func showPoliceStationMarkers() {
+        presenter.showPoliceStationMarkers()
+    }
+    
+    func dismissPoliceStationMarkers() {
+        presenter.dismissPoliceStationMarkers()
+    }
+    
+    func showHotPlaceMarkers() {
+        presenter.showHotPlaceMarkers()
+    }
+    
+    func dismissHotPlaceMarkers() {
+        presenter.dismissHotPlaceMarkers()
+    }
+    
+    func routeToSearchRoute() {
+        //
+    }
+    
+    // MARK: - Private
+    private let cctvUseCase: CCTVUseCase
+    private var cancelBag = Set<AnyCancellable>()
+    private lazy var locationManager: CLLocationManager = {
+        let locationManager = CLLocationManager()
+        return locationManager
+    }()
+    
+    private func getCurrentLocation() -> Location? {
+        locationManager.location?.toLocation()
+    }
+}
+
+extension CLLocation {
+    func toLocation() -> Location {
+        Location(latitude: coordinate.latitude, longitude: coordinate.longitude)
     }
 }

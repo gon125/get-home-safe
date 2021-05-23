@@ -13,7 +13,16 @@ protocol LoggedOutDependency: Dependency {
 
 final class LoggedOutComponent: Component<LoggedOutDependency> {
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+//    let loggedOutViewController: LoggedOutViewController
+//
+//    init(dependency: LoggedOutDependency,
+//         loggedOutViewController: LoggedOutViewController) {
+//        self.loggedOutViewController = loggedOutViewController
+//        super.init(dependency: dependency)
+//    }
+    fileprivate var authenticationUseCase: AuthenticationUseCase {
+        return dependency.authenticationUseCase
+    }
 }
 
 // MARK: - Builder
@@ -29,10 +38,14 @@ final class LoggedOutBuilder: Builder<LoggedOutDependency>, LoggedOutBuildable {
     }
 
     func build(withListener listener: LoggedOutListener) -> LoggedOutRouting {
-        _ = LoggedOutComponent(dependency: dependency)
         let viewController = LoggedOutViewController()
+        let component = LoggedOutComponent(dependency: dependency)
+
         let interactor = LoggedOutInteractor(presenter: viewController, authenticationUseCase: dependency.authenticationUseCase)
         interactor.listener = listener
-        return LoggedOutRouter(interactor: interactor, viewController: viewController)
+
+        let signUpBuilder = SignUpBuilder(dependency: component)
+
+        return LoggedOutRouter(interactor: interactor, viewController: viewController, signUpBuilder: signUpBuilder)
     }
 }

@@ -8,29 +8,26 @@
 import RIBs
 
 protocol LoggedInDependency: Dependency {
+    // TODO: Make sure to convert the variable into lower-camelcase.
     var LoggedInViewController: LoggedInViewControllable { get }
+    // TODO: Declare the set of dependencies required by this RIB, but won't be
+    // created by this RIB.
 }
 
 final class LoggedInComponent: Component<LoggedInDependency> {
 
+    // TODO: Make sure to convert the variable into lower-camelcase.
     fileprivate var LoggedInViewController: LoggedInViewControllable {
         return dependency.LoggedInViewController
     }
 
-    let userID: String
-    let userPW: String
-
-    init(dependency: LoggedInDependency, userID: String, userPW: String) {
-        self.userID = userID
-        self.userPW = userPW
-        super.init(dependency: dependency)
-    }
+    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
 // MARK: - Builder
 
 protocol LoggedInBuildable: Buildable {
-    func build(withListener listener: LoggedInListener, userID: String, userPW: String) -> LoggedInRouting
+    func build(withListener listener: LoggedInListener) -> LoggedInRouting
 }
 
 final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
@@ -39,10 +36,8 @@ final class LoggedInBuilder: Builder<LoggedInDependency>, LoggedInBuildable {
         super.init(dependency: dependency)
     }
 
-    func build(withListener listener: LoggedInListener, userID: String, userPW: String) -> LoggedInRouting {
-        let component = LoggedInComponent(dependency: dependency,
-                                          userID: userID, userPW: userPW)
-//        let mapBuilder = MapBuilder(dependency: component)
+    func build(withListener listener: LoggedInListener) -> LoggedInRouting {
+        let component = LoggedInComponent(dependency: dependency)
         let interactor = LoggedInInteractor()
         let mapBuilder = MapBuilder(dependency: component)
         interactor.listener = listener

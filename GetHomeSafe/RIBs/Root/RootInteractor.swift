@@ -9,7 +9,7 @@ import RIBs
 import RxSwift
 
 protocol RootRouting: ViewableRouting {
-    func routeToLoggedIn(userID: String, userPW: String)
+    func routeToLoggedIn()
 }
 
 protocol RootPresentable: Presentable {
@@ -22,6 +22,9 @@ protocol RootListener: AnyObject {
 }
 
 final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteractable, RootPresentableListener {
+    func didLogin() {
+        router?.routeToLoggedIn()
+    }
 
     weak var router: RootRouting?
     weak var listener: RootListener?
@@ -41,14 +44,6 @@ final class RootInteractor: PresentableInteractor<RootPresentable>, RootInteract
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
-    }
-
-    func didLogin() {
-//        router?.routeToLoggedIn(userID: userID, userPW: userPW)
-    }
-
-    func didLoginStub(userID: String, userPW: String) {
-        router?.routeToLoggedIn(userID: userID, userPW: userPW)
     }
 
 }

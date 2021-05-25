@@ -7,7 +7,7 @@
 
 import RIBs
 
-protocol RootInteractable: Interactable, LoggedOutListener, LoggedInListener {
+protocol RootInteractable: Interactable, LoggedOutListener {
     var router: RootRouting? { get set }
     var listener: RootListener? { get set }
 }
@@ -18,6 +18,9 @@ protocol RootViewControllable: ViewControllable {
 }
 
 final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, RootRouting {
+    func routeToLoggedIn() {
+        //
+    }
 
     init(interactor: RootInteractable,
          viewController: RootViewControllable,
@@ -28,29 +31,18 @@ final class RootRouter: LaunchRouter<RootInteractable, RootViewControllable>, Ro
         super.init(interactor: interactor, viewController: viewController)
         interactor.router = self
     }
-
+    
     override func didLoad() {
         super.didLoad()
         routeToLoggedOut()
     }
-
-    func routeToLoggedIn(userID: String, userPW: String) {
-        if let loggedOut = self.loggedOut {
-            detachChild(loggedOut)
-            viewController.dismiss(viewController: loggedOut.viewControllable)
-            self.loggedOut = nil
-        }
-
-        let loggedIn = loggedInBuilder.build(withListener: interactor, userID: userID, userPW: userPW)
-        attachChild(loggedIn)
-    }
-
+    
     // MARK: - Private
     private let loggedOutBuilder: LoggedOutBuildable
     private let loggedInBuilder: LoggedInBuildable
-
+    
     private var loggedOut: ViewableRouting?
-
+    
     private func routeToLoggedOut() {
         let loggedOut = loggedOutBuilder.build(withListener: interactor)
         self.loggedOut = loggedOut

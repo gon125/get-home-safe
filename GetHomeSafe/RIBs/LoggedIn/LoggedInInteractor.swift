@@ -10,7 +10,7 @@ import RxSwift
 
 protocol LoggedInRouting: Routing {
     func cleanupViews()
-    func routeToMap()
+    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 protocol LoggedInListener: AnyObject {

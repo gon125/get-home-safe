@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol PoliceStationUseCase {
+protocol PoliceStationUseCase: UseCase {
     func getPoliceStations(near currentLocation: Location) -> AnyPublisher<[PoliceStation], Never>
 }
 
@@ -19,6 +19,5 @@ struct StubPoliceStationUseCase: PoliceStationUseCase {
         return Just(policeStations).eraseToAnyPublisher()
     }
 }
-#endif
-
 typealias DefaultPoliceStationUseCase = StubPoliceStationUseCase
+#endif

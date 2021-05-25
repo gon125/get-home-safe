@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-protocol CCTVUseCase {
+protocol CCTVUseCase: UseCase {
     func getCCTVs(near currentLocation: Location) -> AnyPublisher<[CCTV], Never>
 }
 

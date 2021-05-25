@@ -51,6 +51,7 @@
 		F3EE2FFE265CE201002829C7 /* HotPlaceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FFD265CE201002829C7 /* HotPlaceUseCase.swift */; };
 		F3EE3000265CE255002829C7 /* HotPlaceModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FFF265CE255002829C7 /* HotPlaceModels+States+Errors.swift */; };
 		F3EE3004265CE32F002829C7 /* HotPlaceUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE3003265CE32F002829C7 /* HotPlaceUseCaseTest.swift */; };
+		F3EE3006265CEA47002829C7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE3005265CEA47002829C7 /* Icons.swift */; };
 		F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D0262815F700F48F72 /* AppDelegate.swift */; };
 		F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D2262815F700F48F72 /* SceneDelegate.swift */; };
 		F3F598DA262815F800F48F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F598D9262815F800F48F72 /* Assets.xcassets */; };
@@ -130,6 +131,7 @@
 		F3EE2FFD265CE201002829C7 /* HotPlaceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlaceUseCase.swift; sourceTree = "<group>"; };
 		F3EE2FFF265CE255002829C7 /* HotPlaceModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HotPlaceModels+States+Errors.swift"; sourceTree = "<group>"; };
 		F3EE3003265CE32F002829C7 /* HotPlaceUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlaceUseCaseTest.swift; sourceTree = "<group>"; };
+		F3EE3005265CEA47002829C7 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		F3F598CD262815F700F48F72 /* GetHomeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetHomeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F598D0262815F700F48F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F598D2262815F700F48F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				F341C04B264C05A600639C13 /* UIToggleButton.swift */,
+				F3EE3005265CEA47002829C7 /* Icons.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				F386056B2639A79500DD5C47 /* MapViewController.swift in Sources */,
 				F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */,
 				F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */,
+				F3EE3006265CEA47002829C7 /* Icons.swift in Sources */,
 				F341C04C264C05A600639C13 /* UIToggleButton.swift in Sources */,
 				F3EE3000265CE255002829C7 /* HotPlaceModels+States+Errors.swift in Sources */,
 				F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */,

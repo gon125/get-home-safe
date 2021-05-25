@@ -18,6 +18,7 @@ protocol MapPresentableListener: class {
 
 extension MapViewController {
     final class ViewModel: MapPresentable {
+        
         weak var listener: MapPresentableListener?
         weak var view: MapViewController?
         
@@ -25,6 +26,8 @@ extension MapViewController {
         @Published var showCCTVs = false
         @Published var policeStationMarkers: Set<NMFMarker> = Set()
         @Published var showPoliceStations = false
+        @Published var hotPlaceMarkers: Set<NMFMarker> = Set()
+        @Published var showHotPlaces = false
         
         init() {
             setupBindings()
@@ -48,11 +51,11 @@ extension MapViewController {
         }
         
         func showHotPlaceMarkers() {
-            // TODO:
+            showHotPlaces = true
         }
         
         func dismissHotPlaceMarkers() {
-            // TODO:
+            showHotPlaces = false
         }
         
         var currentCameraLocation: Location? {
@@ -67,7 +70,7 @@ extension MapViewController {
             cctvMarkers.removeAll()
             cctvs.forEach { cctv in
                 let marker = NMFMarker(position: cctv.coordinate.toLatLong)
-                marker.iconImage = .init(image: UIImage(systemName: "camera.aperture")!)
+                marker.iconImage = .init(image: CCTV.image)
                 marker.mapView = showCCTVs ? view?.naverMapView.mapView : nil
                 cctvMarkers.insert(marker)
             }
@@ -78,9 +81,20 @@ extension MapViewController {
             policeStationMarkers.removeAll()
             policeStations.forEach { policeStation in
                 let marker = NMFMarker(position: policeStation.coordinate.toLatLong)
-                marker.iconImage = .init(image: UIImage(systemName: "building.2.crop.circle.fill")!)
+                marker.iconImage = .init(image: PoliceStation.image)
                 marker.mapView = showPoliceStations ? view?.naverMapView.mapView : nil
                 policeStationMarkers.insert(marker)
+            }
+        }
+        
+        func placeHotPlaceMarkers(with hotPlaces: [HotPlace]) {
+            hotPlaceMarkers.forEach { $0.mapView = nil }
+            hotPlaceMarkers.removeAll()
+            hotPlaces.forEach { hotPlace in
+                let marker = NMFMarker(position: hotPlace.coordinate.toLatLong)
+                marker.iconImage = .init(image: HotPlace.image)
+                marker.mapView = showHotPlaces ? view?.naverMapView.mapView : nil
+                hotPlaceMarkers.insert(marker)
             }
         }
         
@@ -106,6 +120,7 @@ extension MapViewController {
                     self?.cctvMarkers.forEach { $0.mapView = nil }
                 }
             }.store(in: &cancelBag)
+            
             $showPoliceStations.sink { [weak self] isPoliceStationShowing in
                 if isPoliceStationShowing {
                     self?.policeStationMarkers.forEach { $0.mapView = self?.view?.naverMapView.mapView }
@@ -113,6 +128,15 @@ extension MapViewController {
                     self?.policeStationMarkers.forEach { $0.mapView = nil }
                 }
             }.store(in: &cancelBag)
+            
+            $showHotPlaces.sink { [weak self] isHotPlaceShowing in
+                if isHotPlaceShowing {
+                    self?.hotPlaceMarkers.forEach { $0.mapView = self?.view?.naverMapView.mapView }
+                } else {
+                    self?.hotPlaceMarkers.forEach { $0.mapView = nil }
+                }
+            }.store(in: &cancelBag)
+            
         }
     }
 }

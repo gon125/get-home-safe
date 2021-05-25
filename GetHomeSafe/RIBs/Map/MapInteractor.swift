@@ -17,6 +17,7 @@ protocol MapPresentable: Presentable {
     var listener: MapPresentableListener? { get set }
     func placeCCTVMarkers(with cctvs: [CCTV])
     func placePoliceStationMarkers(with policeStations: [PoliceStation])
+    func placeHotPlaceMarkers(with hotPlaces: [HotPlace])
     
     var currentCameraLocation: Location? { get }
     
@@ -42,6 +43,9 @@ final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractabl
         policeStationUseCase.getPoliceStations(near: currentCameraLocation).sink { [weak self] policeStations in
             self?.presenter.placePoliceStationMarkers(with: policeStations)
         }.store(in: &cancelBag)
+        hotPlaceUseCase.getHotPlaces(near: currentCameraLocation).sink { [weak self] hotPlaces in
+            self?.presenter.placeHotPlaceMarkers(with: hotPlaces)
+        }.store(in: &cancelBag)
     }
     
     weak var router: MapRouting?
@@ -49,9 +53,10 @@ final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractabl
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    init(presenter: MapPresentable, cctvUseCase: CCTVUseCase, policeStationUseCase: PoliceStationUseCase) {
+    init(presenter: MapPresentable, cctvUseCase: CCTVUseCase, policeStationUseCase: PoliceStationUseCase, hotPlaceUseCase: HotPlaceUseCase) {
         self.policeStationUseCase = policeStationUseCase
         self.cctvUseCase = cctvUseCase
+        self.hotPlaceUseCase = hotPlaceUseCase
         super.init(presenter: presenter)
         presenter.listener = self
     }
@@ -98,6 +103,7 @@ final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractabl
     // MARK: - Private
     private let cctvUseCase: CCTVUseCase
     private let policeStationUseCase: PoliceStationUseCase
+    private let hotPlaceUseCase: HotPlaceUseCase
     private var cancelBag = Set<AnyCancellable>()
     private lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()

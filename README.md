@@ -1,7 +1,7 @@
 # get-home-safe
 
 ## Demo Video
-Uploading Simulator Screen Recording - iPhone 12 - 2021-05-25 at 17.24.54.mp4…
+https://user-images.githubusercontent.com/20037035/119465654-d579f280-bd7e-11eb-8fa4-ad01183017d0.mp4
 
 ## 작업환경 셋팅
 1. 현재 레포지토리를 Fork합니다. 🍴

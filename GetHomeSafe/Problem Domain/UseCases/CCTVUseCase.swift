@@ -19,4 +19,6 @@ struct StubCCTVUseCase: CCTVUseCase {
         return Just(cctvs).eraseToAnyPublisher()
     }
 }
+
+typealias DefaultCCTVUseCase = StubCCTVUseCase
 #endif

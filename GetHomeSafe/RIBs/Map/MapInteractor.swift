@@ -16,6 +16,8 @@ protocol MapRouting: ViewableRouting {
 protocol MapPresentable: Presentable {
     var listener: MapPresentableListener? { get set }
     func placeCCTVMarkers(with cctvs: [CCTV])
+    func placePoliceStationMarkers(with policeStations: [PoliceStation])
+    
     var currentCameraLocation: Location? { get }
     
     func showCCTVMarkers()
@@ -34,9 +36,12 @@ protocol MapListener: class {
 final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractable, MapPresentableListener {
     func cameraLocationChanged() {
         guard let currentCameraLocation = presenter.currentCameraLocation else { return }
-            cctvUseCase.getCCTVs(near: currentCameraLocation).sink { [weak self] cctvs in
-                self?.presenter.placeCCTVMarkers(with: cctvs)
-            }.store(in: &cancelBag)
+        cctvUseCase.getCCTVs(near: currentCameraLocation).sink { [weak self] cctvs in
+            self?.presenter.placeCCTVMarkers(with: cctvs)
+        }.store(in: &cancelBag)
+        policeStationUseCase.getPoliceStations(near: currentCameraLocation).sink { [weak self] policeStations in
+            self?.presenter.placePoliceStationMarkers(with: policeStations)
+        }.store(in: &cancelBag)
     }
     
     weak var router: MapRouting?
@@ -44,7 +49,8 @@ final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractabl
 
     // TODO: Add additional dependencies to constructor. Do not perform any logic
     // in constructor.
-    init(presenter: MapPresentable, cctvUseCase: CCTVUseCase) {
+    init(presenter: MapPresentable, cctvUseCase: CCTVUseCase, policeStationUseCase: PoliceStationUseCase) {
+        self.policeStationUseCase = policeStationUseCase
         self.cctvUseCase = cctvUseCase
         super.init(presenter: presenter)
         presenter.listener = self
@@ -91,6 +97,7 @@ final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractabl
     
     // MARK: - Private
     private let cctvUseCase: CCTVUseCase
+    private let policeStationUseCase: PoliceStationUseCase
     private var cancelBag = Set<AnyCancellable>()
     private lazy var locationManager: CLLocationManager = {
         let locationManager = CLLocationManager()

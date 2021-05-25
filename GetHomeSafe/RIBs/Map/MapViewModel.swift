@@ -23,6 +23,8 @@ extension MapViewController {
         
         @Published var cctvMarkers: Set<NMFMarker> = Set()
         @Published var showCCTVs = false
+        @Published var policeStationMarkers: Set<NMFMarker> = Set()
+        @Published var showPoliceStations = false
         
         init() {
             setupBindings()
@@ -38,11 +40,11 @@ extension MapViewController {
         }
         
         func showPoliceStationMarkers() {
-            // TODO:
+            showPoliceStations = true
         }
         
         func dismissPoliceStationMarkers() {
-            // TODO:
+            showPoliceStations = false
         }
         
         func showHotPlaceMarkers() {
@@ -71,6 +73,17 @@ extension MapViewController {
             }
         }
         
+        func placePoliceStationMarkers(with policeStations: [PoliceStation]) {
+            policeStationMarkers.forEach { $0.mapView = nil }
+            policeStationMarkers.removeAll()
+            policeStations.forEach { policeStation in
+                let marker = NMFMarker(position: policeStation.coordinate.toLatLong)
+                marker.iconImage = .init(image: UIImage(systemName: "building.2.crop.circle.fill")!)
+                marker.mapView = showPoliceStations ? view?.naverMapView.mapView : nil
+                policeStationMarkers.insert(marker)
+            }
+        }
+        
         func cameraLocationChanged() {
             listener?.cameraLocationChanged()
         }
@@ -91,6 +104,13 @@ extension MapViewController {
                     self?.cctvMarkers.forEach { $0.mapView = self?.view?.naverMapView.mapView }
                 } else {
                     self?.cctvMarkers.forEach { $0.mapView = nil }
+                }
+            }.store(in: &cancelBag)
+            $showPoliceStations.sink { [weak self] isPoliceStationShowing in
+                if isPoliceStationShowing {
+                    self?.policeStationMarkers.forEach { $0.mapView = self?.view?.naverMapView.mapView }
+                } else {
+                    self?.policeStationMarkers.forEach { $0.mapView = nil }
                 }
             }.store(in: &cancelBag)
         }

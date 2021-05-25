@@ -32,7 +32,7 @@ final class MapBuilder: Builder<MapDependency>, MapBuildable {
     func build(withListener listener: MapListener) -> MapRouting {
         let component = MapComponent(dependency: dependency)
         let viewController = MapViewController(viewModel: .init())
-        let interactor = MapInteractor(presenter: viewController.viewModel, cctvUseCase: StubCCTVUseCase())
+        let interactor = MapInteractor(presenter: viewController.viewModel, cctvUseCase: DefaultCCTVUseCase(), policeStationUseCase: DefaultPoliceStationUseCase())
         viewController.viewModel.listener = interactor
         let floatingActionsBuilder = FloatingActionsBuilder(dependency: component)
         interactor.listener = listener

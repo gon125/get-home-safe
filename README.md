@@ -1,5 +1,8 @@
 # get-home-safe
 
+## Demo Video
+Uploading Simulator Screen Recording - iPhone 12 - 2021-05-25 at 17.24.54.mp4…
+
 ## 작업환경 셋팅
 1. 현재 레포지토리를 Fork합니다. 🍴
 2. Fork한 레포지토리를 적절한 위치에 클론 한 후 터미널에서 아래의 shell scrip를 실행시킵니다.

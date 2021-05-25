@@ -45,6 +45,9 @@
 		F3C8FF98262AC83500111AB5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF97262AC83500111AB5 /* Model.swift */; };
 		F3D098F2264A28EE00423207 /* LoggedInComponent+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */; };
 		F3DCC1B5262A9FFB005247C4 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F3DCC1B4262A9FFB005247C4 /* KeychainAccess */; };
+		F3EE2FF8265CB73D002829C7 /* PoliceStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FF7265CB73D002829C7 /* PoliceStationUseCase.swift */; };
+		F3EE2FFA265CB79F002829C7 /* PoliceStationModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FF9265CB79F002829C7 /* PoliceStationModels+States+Errors.swift */; };
+		F3EE2FFC265CCAF7002829C7 /* PoliceStationUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FFB265CCAF7002829C7 /* PoliceStationUseCaseTest.swift */; };
 		F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D0262815F700F48F72 /* AppDelegate.swift */; };
 		F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D2262815F700F48F72 /* SceneDelegate.swift */; };
 		F3F598DA262815F800F48F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F598D9262815F800F48F72 /* Assets.xcassets */; };
@@ -118,6 +121,9 @@
 		F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Map.swift"; sourceTree = "<group>"; };
 		F3DF55BE265A2EB000D03375 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		F3DF55BF265A300200D03375 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		F3EE2FF7265CB73D002829C7 /* PoliceStationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationUseCase.swift; sourceTree = "<group>"; };
+		F3EE2FF9265CB79F002829C7 /* PoliceStationModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoliceStationModels+States+Errors.swift"; sourceTree = "<group>"; };
+		F3EE2FFB265CCAF7002829C7 /* PoliceStationUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationUseCaseTest.swift; sourceTree = "<group>"; };
 		F3F598CD262815F700F48F72 /* GetHomeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetHomeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F598D0262815F700F48F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F598D2262815F700F48F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 			children = (
 				F3C8FF6D262ABD9A00111AB5 /* AuthenticationUseCase.swift */,
 				F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */,
+				F3EE2FF7265CB73D002829C7 /* PoliceStationUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -293,6 +300,7 @@
 			children = (
 				F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */,
 				F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */,
+				F3EE2FF9265CB79F002829C7 /* PoliceStationModels+States+Errors.swift */,
 			);
 			path = "Models+States+Errors";
 			sourceTree = "<group>";
@@ -372,6 +380,7 @@
 			children = (
 				F3F598E7262815F800F48F72 /* GetHomeSafeTests.swift */,
 				F3F598E9262815F800F48F72 /* Info.plist */,
+				F3EE2FFB265CCAF7002829C7 /* PoliceStationUseCaseTest.swift */,
 			);
 			path = GetHomeSafeTests;
 			sourceTree = "<group>";
@@ -651,6 +660,7 @@
 				F3C3162D264B80DD007177E4 /* CCTVUseCase.swift in Sources */,
 				F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */,
 				F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */,
+				F3EE2FF8265CB73D002829C7 /* PoliceStationUseCase.swift in Sources */,
 				F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */,
 				F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */,
 				F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */,
@@ -664,6 +674,7 @@
 				F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */,
 				F341C045264BA5E800639C13 /* FloatingActionsRouter.swift in Sources */,
 				F341C047264BA5E800639C13 /* FloatingActionsBuilder.swift in Sources */,
+				F3EE2FFA265CB79F002829C7 /* PoliceStationModels+States+Errors.swift in Sources */,
 				F341C048264BA5E800639C13 /* FloatingActionsInteractor.swift in Sources */,
 				F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */,
 				F341C050264CE47C00639C13 /* MapViewModel.swift in Sources */,
@@ -691,6 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EE2FFC265CCAF7002829C7 /* PoliceStationUseCaseTest.swift in Sources */,
 				F3F598E8262815F800F48F72 /* GetHomeSafeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,9 +7,7 @@
 
 import Foundation
 
-struct SignupModel: Model {
-    
-}
+struct SignupModel: Model { }
 
 enum SignupState: State {
     case notRequested

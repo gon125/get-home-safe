@@ -19,7 +19,7 @@ class PoliceStationUseCaseTest: XCTestCase {
         let cancellable = policeStationUseCase.getPoliceStations(near: location).sink { policeStations = $0; expectation.fulfill() }
         waitForExpectations(timeout: 10)
         cancellable.cancel()
-        XCTAssertEqual(policeStations?.isEmpty, false)
+        XCTAssertNotEqual(policeStations, nil)
     }
 
 }

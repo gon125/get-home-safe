@@ -16,6 +16,8 @@ protocol AuthenticationUseCase: UseCase {
 }
 
 #if DEBUG
+typealias DefaultAuthenticationUseCase = StubAuthenticationUseCase
+
 final class StubAuthenticationUseCase: AuthenticationUseCase {
     
     func signup(_ model: SignupModel) -> Observable<SignupState> {

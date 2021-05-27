@@ -13,6 +13,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     public var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        DIContainer.registerDependencies()
+        
         return true
     }
 
@@ -30,5 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+}
+
+extension DIContainer {
+    static func registerDependencies() {
+        DIContainer.shared.register(DefaultCCTVUseCase() as CCTVUseCase)
+        DIContainer.shared.register(DefaultHotPlaceUseCase() as HotPlaceUseCase)
+        DIContainer.shared.register(DefaultPoliceStationUseCase() as PoliceStationUseCase)
+        DIContainer.shared.register(DefaultAuthenticationUseCase() as AuthenticationUseCase)
     }
 }

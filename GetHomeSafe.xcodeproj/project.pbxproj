@@ -7,38 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1AE3551632B1F5B7F6509350 /* Pods_GetHomeSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F4FCD3EBB53A42599755 /* Pods_GetHomeSafe.framework */; };
+		02FC3803BDA7CA4DA5130913 /* Pods_GetHomeSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B506F4FCD3EBB53A42599755 /* Pods_GetHomeSafe.framework */; };
 		9ED8336007A167943A54CC7E /* Pods_GetHomeSafeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 787BB452E39442B58A51EA34 /* Pods_GetHomeSafeTests.framework */; };
-		A26E6AFC2658F1E2001C214A /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE12658F1E2001C214A /* LoggedInBuilder.swift */; };
-		A26E6AFD2658F1E2001C214A /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE22658F1E2001C214A /* LoggedInRouter.swift */; };
-		A26E6AFE2658F1E2001C214A /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE32658F1E2001C214A /* LoggedInInteractor.swift */; };
-		A26E6AFF2658F1E2001C214A /* LoggedInComponent+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE42658F1E2001C214A /* LoggedInComponent+Map.swift */; };
-		A26E6B002658F1E2001C214A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE62658F1E2001C214A /* SignUpViewController.swift */; };
-		A26E6B012658F1E2001C214A /* SignUpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE72658F1E2001C214A /* SignUpRouter.swift */; };
-		A26E6B022658F1E2001C214A /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE82658F1E2001C214A /* SignUpInteractor.swift */; };
-		A26E6B032658F1E2001C214A /* SignUpBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AE92658F1E2001C214A /* SignUpBuilder.swift */; };
-		A26E6B042658F1E2001C214A /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AEB2658F1E2001C214A /* MapRouter.swift */; };
-		A26E6B052658F1E3001C214A /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AEC2658F1E2001C214A /* MapInteractor.swift */; };
-		A26E6B062658F1E3001C214A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AED2658F1E2001C214A /* MapViewController.swift */; };
-		A26E6B072658F1E3001C214A /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AEE2658F1E2001C214A /* MapBuilder.swift */; };
-		A26E6B082658F1E3001C214A /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF02658F1E2001C214A /* LoggedOutViewController.swift */; };
-		A26E6B092658F1E3001C214A /* LoggedOutComponent+SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF12658F1E2001C214A /* LoggedOutComponent+SignUp.swift */; };
-		A26E6B0A2658F1E3001C214A /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF22658F1E2001C214A /* LoggedOutInteractor.swift */; };
-		A26E6B0B2658F1E3001C214A /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF32658F1E2001C214A /* LoggedOutBuilder.swift */; };
-		A26E6B0C2658F1E3001C214A /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF42658F1E2001C214A /* LoggedOutRouter.swift */; };
-		A26E6B0D2658F1E3001C214A /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF62658F1E2001C214A /* RootComponent+LoggedOut.swift */; };
-		A26E6B0E2658F1E3001C214A /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF72658F1E2001C214A /* RootInteractor.swift */; };
-		A26E6B0F2658F1E3001C214A /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF82658F1E2001C214A /* RootViewController.swift */; };
-		A26E6B102658F1E3001C214A /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AF92658F1E2001C214A /* RootComponent+LoggedIn.swift */; };
-		A26E6B112658F1E3001C214A /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AFA2658F1E2001C214A /* RootRouter.swift */; };
-		A26E6B122658F1E3001C214A /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26E6AFB2658F1E2001C214A /* RootBuilder.swift */; };
 		F3051035262826DF00D63D64 /* SceneComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3051034262826DF00D63D64 /* SceneComponent.swift */; };
+		F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEAD826297AB500C5444B /* RootComponent+LoggedOut.swift */; };
+		F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */; };
+		F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */; };
+		F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */; };
+		F341C03C264B9F8B00639C13 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C03B264B9F8B00639C13 /* Location.swift */; };
+		F341C045264BA5E800639C13 /* FloatingActionsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C041264BA5E800639C13 /* FloatingActionsRouter.swift */; };
+		F341C046264BA5E800639C13 /* FloatingActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C042264BA5E800639C13 /* FloatingActionsViewController.swift */; };
+		F341C047264BA5E800639C13 /* FloatingActionsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C043264BA5E800639C13 /* FloatingActionsBuilder.swift */; };
+		F341C048264BA5E800639C13 /* FloatingActionsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C044264BA5E800639C13 /* FloatingActionsInteractor.swift */; };
+		F341C04C264C05A600639C13 /* UIToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04B264C05A600639C13 /* UIToggleButton.swift */; };
+		F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */; };
+		F341C050264CE47C00639C13 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04F264CE47C00639C13 /* MapViewModel.swift */; };
 		F386055F26397DF700DD5C47 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386055E26397DF700DD5C47 /* State.swift */; };
+		F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */; };
+		F38605642639A48600DD5C47 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605632639A48600DD5C47 /* Error.swift */; };
+		F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605662639A79500DD5C47 /* MapRouter.swift */; };
+		F386056B2639A79500DD5C47 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605672639A79500DD5C47 /* MapViewController.swift */; };
+		F386056C2639A79500DD5C47 /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605682639A79500DD5C47 /* MapBuilder.swift */; };
+		F386056D2639A79500DD5C47 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605692639A79500DD5C47 /* MapInteractor.swift */; };
+		F393093C265F63D0003E57D7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393093B265F63D0003E57D7 /* DIContainer.swift */; };
+		F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259326296B5000C7FC36 /* RootRouter.swift */; };
+		F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259426296B5000C7FC36 /* RootViewController.swift */; };
+		F3BC259926296B5000C7FC36 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259526296B5000C7FC36 /* RootBuilder.swift */; };
+		F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259626296B5000C7FC36 /* RootInteractor.swift */; };
+		F3C3162D264B80DD007177E4 /* CCTVUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */; };
+		F3C3162F264B833D007177E4 /* CCTVModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */; };
+		F3C8FF60262ABC2800111AB5 /* LoggedOutRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */; };
+		F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */; };
+		F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */; };
+		F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF5F262ABC2800111AB5 /* LoggedOutInteractor.swift */; };
 		F3C8FF6E262ABD9A00111AB5 /* AuthenticationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF6D262ABD9A00111AB5 /* AuthenticationUseCase.swift */; };
 		F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF76262AC0D000111AB5 /* UseCase.swift */; };
 		F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */; };
 		F3C8FF98262AC83500111AB5 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3C8FF97262AC83500111AB5 /* Model.swift */; };
+		F3D098F2264A28EE00423207 /* LoggedInComponent+Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */; };
 		F3DCC1B5262A9FFB005247C4 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = F3DCC1B4262A9FFB005247C4 /* KeychainAccess */; };
+		F3EE2FF8265CB73D002829C7 /* PoliceStationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FF7265CB73D002829C7 /* PoliceStationUseCase.swift */; };
+		F3EE2FFA265CB79F002829C7 /* PoliceStationModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FF9265CB79F002829C7 /* PoliceStationModels+States+Errors.swift */; };
+		F3EE2FFC265CCAF7002829C7 /* PoliceStationUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FFB265CCAF7002829C7 /* PoliceStationUseCaseTest.swift */; };
+		F3EE2FFE265CE201002829C7 /* HotPlaceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FFD265CE201002829C7 /* HotPlaceUseCase.swift */; };
+		F3EE3000265CE255002829C7 /* HotPlaceModels+States+Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE2FFF265CE255002829C7 /* HotPlaceModels+States+Errors.swift */; };
+		F3EE3004265CE32F002829C7 /* HotPlaceUseCaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE3003265CE32F002829C7 /* HotPlaceUseCaseTest.swift */; };
+		F3EE3006265CEA47002829C7 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EE3005265CEA47002829C7 /* Icons.swift */; };
 		F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D0262815F700F48F72 /* AppDelegate.swift */; };
 		F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598D2262815F700F48F72 /* SceneDelegate.swift */; };
 		F3F598DA262815F800F48F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F598D9262815F800F48F72 /* Assets.xcassets */; };
@@ -73,37 +87,53 @@
 		574ED229EC7B176A77908089 /* Pods-GetHomeSafeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetHomeSafeTests.debug.xcconfig"; path = "Target Support Files/Pods-GetHomeSafeTests/Pods-GetHomeSafeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		787BB452E39442B58A51EA34 /* Pods_GetHomeSafeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetHomeSafeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6C04E1238EFE0DA9858256 /* Pods-GetHomeSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetHomeSafe.release.xcconfig"; path = "Target Support Files/Pods-GetHomeSafe/Pods-GetHomeSafe.release.xcconfig"; sourceTree = "<group>"; };
-		A26E6AE12658F1E2001C214A /* LoggedInBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
-		A26E6AE22658F1E2001C214A /* LoggedInRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
-		A26E6AE32658F1E2001C214A /* LoggedInInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
-		A26E6AE42658F1E2001C214A /* LoggedInComponent+Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Map.swift"; sourceTree = "<group>"; };
-		A26E6AE62658F1E2001C214A /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		A26E6AE72658F1E2001C214A /* SignUpRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRouter.swift; sourceTree = "<group>"; };
-		A26E6AE82658F1E2001C214A /* SignUpInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
-		A26E6AE92658F1E2001C214A /* SignUpBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpBuilder.swift; sourceTree = "<group>"; };
-		A26E6AEB2658F1E2001C214A /* MapRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
-		A26E6AEC2658F1E2001C214A /* MapInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
-		A26E6AED2658F1E2001C214A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A26E6AEE2658F1E2001C214A /* MapBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
-		A26E6AF02658F1E2001C214A /* LoggedOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
-		A26E6AF12658F1E2001C214A /* LoggedOutComponent+SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoggedOutComponent+SignUp.swift"; sourceTree = "<group>"; };
-		A26E6AF22658F1E2001C214A /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
-		A26E6AF32658F1E2001C214A /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
-		A26E6AF42658F1E2001C214A /* LoggedOutRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
-		A26E6AF62658F1E2001C214A /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
-		A26E6AF72658F1E2001C214A /* RootInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
-		A26E6AF82658F1E2001C214A /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		A26E6AF92658F1E2001C214A /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
-		A26E6AFA2658F1E2001C214A /* RootRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
-		A26E6AFB2658F1E2001C214A /* RootBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
 		AA0379B6BA4CCE5EB2A5EF7C /* Pods_GetHomeSafe_GetHomeSafeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetHomeSafe_GetHomeSafeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B506F4FCD3EBB53A42599755 /* Pods_GetHomeSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetHomeSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3051034262826DF00D63D64 /* SceneComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneComponent.swift; sourceTree = "<group>"; };
+		F33BEAD826297AB500C5444B /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInRouter.swift; sourceTree = "<group>"; };
+		F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInBuilder.swift; sourceTree = "<group>"; };
+		F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInInteractor.swift; sourceTree = "<group>"; };
+		F341C03B264B9F8B00639C13 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		F341C041264BA5E800639C13 /* FloatingActionsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsRouter.swift; sourceTree = "<group>"; };
+		F341C042264BA5E800639C13 /* FloatingActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsViewController.swift; sourceTree = "<group>"; };
+		F341C043264BA5E800639C13 /* FloatingActionsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsBuilder.swift; sourceTree = "<group>"; };
+		F341C044264BA5E800639C13 /* FloatingActionsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionsInteractor.swift; sourceTree = "<group>"; };
+		F341C04B264C05A600639C13 /* UIToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToggleButton.swift; sourceTree = "<group>"; };
+		F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapComponent+FloatingActions.swift"; sourceTree = "<group>"; };
+		F341C04F264CE47C00639C13 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		F386055E26397DF700DD5C47 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
+		F38605632639A48600DD5C47 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		F38605662639A79500DD5C47 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		F38605672639A79500DD5C47 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F38605682639A79500DD5C47 /* MapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
+		F38605692639A79500DD5C47 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
+		F393093B265F63D0003E57D7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		F3BC259326296B5000C7FC36 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		F3BC259426296B5000C7FC36 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F3BC259526296B5000C7FC36 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		F3BC259626296B5000C7FC36 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTVUseCase.swift; sourceTree = "<group>"; };
+		F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CCTVModels+States+Errors.swift"; sourceTree = "<group>"; };
+		F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutRouter.swift; sourceTree = "<group>"; };
+		F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
+		F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutBuilder.swift; sourceTree = "<group>"; };
+		F3C8FF5F262ABC2800111AB5 /* LoggedOutInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutInteractor.swift; sourceTree = "<group>"; };
 		F3C8FF6D262ABD9A00111AB5 /* AuthenticationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationUseCase.swift; sourceTree = "<group>"; };
 		F3C8FF76262AC0D000111AB5 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationModels+States+Errors.swift"; sourceTree = "<group>"; };
 		F3C8FF97262AC83500111AB5 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoggedInComponent+Map.swift"; sourceTree = "<group>"; };
+		F3DF55BE265A2EB000D03375 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		F3DF55BF265A300200D03375 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		F3EE2FF7265CB73D002829C7 /* PoliceStationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationUseCase.swift; sourceTree = "<group>"; };
+		F3EE2FF9265CB79F002829C7 /* PoliceStationModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoliceStationModels+States+Errors.swift"; sourceTree = "<group>"; };
+		F3EE2FFB265CCAF7002829C7 /* PoliceStationUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationUseCaseTest.swift; sourceTree = "<group>"; };
+		F3EE2FFD265CE201002829C7 /* HotPlaceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlaceUseCase.swift; sourceTree = "<group>"; };
+		F3EE2FFF265CE255002829C7 /* HotPlaceModels+States+Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HotPlaceModels+States+Errors.swift"; sourceTree = "<group>"; };
+		F3EE3003265CE32F002829C7 /* HotPlaceUseCaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPlaceUseCaseTest.swift; sourceTree = "<group>"; };
+		F3EE3005265CEA47002829C7 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		F3F598CD262815F700F48F72 /* GetHomeSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetHomeSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F598D0262815F700F48F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F598D2262815F700F48F72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3DCC1B5262A9FFB005247C4 /* KeychainAccess in Frameworks */,
-				1AE3551632B1F5B7F6509350 /* Pods_GetHomeSafe.framework in Frameworks */,
+				02FC3803BDA7CA4DA5130913 /* Pods_GetHomeSafe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,64 +187,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A26E6AE02658F1E2001C214A /* LoggedIn */ = {
-			isa = PBXGroup;
-			children = (
-				A26E6AE12658F1E2001C214A /* LoggedInBuilder.swift */,
-				A26E6AE22658F1E2001C214A /* LoggedInRouter.swift */,
-				A26E6AE32658F1E2001C214A /* LoggedInInteractor.swift */,
-				A26E6AE42658F1E2001C214A /* LoggedInComponent+Map.swift */,
-			);
-			path = LoggedIn;
-			sourceTree = "<group>";
-		};
-		A26E6AE52658F1E2001C214A /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-				A26E6AE62658F1E2001C214A /* SignUpViewController.swift */,
-				A26E6AE72658F1E2001C214A /* SignUpRouter.swift */,
-				A26E6AE82658F1E2001C214A /* SignUpInteractor.swift */,
-				A26E6AE92658F1E2001C214A /* SignUpBuilder.swift */,
-			);
-			path = SignUp;
-			sourceTree = "<group>";
-		};
-		A26E6AEA2658F1E2001C214A /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				A26E6AEB2658F1E2001C214A /* MapRouter.swift */,
-				A26E6AEC2658F1E2001C214A /* MapInteractor.swift */,
-				A26E6AED2658F1E2001C214A /* MapViewController.swift */,
-				A26E6AEE2658F1E2001C214A /* MapBuilder.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
-		A26E6AEF2658F1E2001C214A /* LoggedOut */ = {
-			isa = PBXGroup;
-			children = (
-				A26E6AF02658F1E2001C214A /* LoggedOutViewController.swift */,
-				A26E6AF12658F1E2001C214A /* LoggedOutComponent+SignUp.swift */,
-				A26E6AF22658F1E2001C214A /* LoggedOutInteractor.swift */,
-				A26E6AF32658F1E2001C214A /* LoggedOutBuilder.swift */,
-				A26E6AF42658F1E2001C214A /* LoggedOutRouter.swift */,
-			);
-			path = LoggedOut;
-			sourceTree = "<group>";
-		};
-		A26E6AF52658F1E2001C214A /* Root */ = {
-			isa = PBXGroup;
-			children = (
-				A26E6AF62658F1E2001C214A /* RootComponent+LoggedOut.swift */,
-				A26E6AF72658F1E2001C214A /* RootInteractor.swift */,
-				A26E6AF82658F1E2001C214A /* RootViewController.swift */,
-				A26E6AF92658F1E2001C214A /* RootComponent+LoggedIn.swift */,
-				A26E6AFA2658F1E2001C214A /* RootRouter.swift */,
-				A26E6AFB2658F1E2001C214A /* RootBuilder.swift */,
-			);
-			path = Root;
-			sourceTree = "<group>";
-		};
 		AB1787B9BF25548B9B6DEA48 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,14 +200,91 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F305100B262825FA00D63D64 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				F3BC259326296B5000C7FC36 /* RootRouter.swift */,
+				F3BC259426296B5000C7FC36 /* RootViewController.swift */,
+				F3BC259526296B5000C7FC36 /* RootBuilder.swift */,
+				F3BC259626296B5000C7FC36 /* RootInteractor.swift */,
+				F33BEAD826297AB500C5444B /* RootComponent+LoggedOut.swift */,
+				F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		F30510182628264000D63D64 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				F3F598D0262815F700F48F72 /* AppDelegate.swift */,
 				F3F598D2262815F700F48F72 /* SceneDelegate.swift */,
 				F3051034262826DF00D63D64 /* SceneComponent.swift */,
+				F393093B265F63D0003E57D7 /* DIContainer.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F33BEAFF262A97D500C5444B /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				F33BEB00262A9A9900C5444B /* LoggedInRouter.swift */,
+				F33BEB01262A9A9900C5444B /* LoggedInBuilder.swift */,
+				F33BEB02262A9A9900C5444B /* LoggedInInteractor.swift */,
+				F3D098F1264A28EE00423207 /* LoggedInComponent+Map.swift */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		F341C040264BA5B100639C13 /* FloatingActions */ = {
+			isa = PBXGroup;
+			children = (
+				F341C041264BA5E800639C13 /* FloatingActionsRouter.swift */,
+				F341C042264BA5E800639C13 /* FloatingActionsViewController.swift */,
+				F341C043264BA5E800639C13 /* FloatingActionsBuilder.swift */,
+				F341C044264BA5E800639C13 /* FloatingActionsInteractor.swift */,
+			);
+			path = FloatingActions;
+			sourceTree = "<group>";
+		};
+		F341C049264C059200639C13 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F341C04A264C059700639C13 /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F341C04A264C059700639C13 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F341C04B264C05A600639C13 /* UIToggleButton.swift */,
+				F3EE3005265CEA47002829C7 /* Icons.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F38605652639A78200DD5C47 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F38605662639A79500DD5C47 /* MapRouter.swift */,
+				F38605692639A79500DD5C47 /* MapInteractor.swift */,
+				F341C04F264CE47C00639C13 /* MapViewModel.swift */,
+				F38605672639A79500DD5C47 /* MapViewController.swift */,
+				F38605682639A79500DD5C47 /* MapBuilder.swift */,
+				F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		F3C8FF5B262ABC1800111AB5 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				F3C8FF5C262ABC2800111AB5 /* LoggedOutRouter.swift */,
+				F3C8FF5D262ABC2800111AB5 /* LoggedOutViewController.swift */,
+				F3C8FF5E262ABC2800111AB5 /* LoggedOutBuilder.swift */,
+				F3C8FF5F262ABC2800111AB5 /* LoggedOutInteractor.swift */,
+			);
+			path = LoggedOut;
 			sourceTree = "<group>";
 		};
 		F3C8FF6A262ABC4A00111AB5 /* Problem Domain */ = {
@@ -252,6 +301,9 @@
 			isa = PBXGroup;
 			children = (
 				F3C8FF6D262ABD9A00111AB5 /* AuthenticationUseCase.swift */,
+				F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */,
+				F3EE2FF7265CB73D002829C7 /* PoliceStationUseCase.swift */,
+				F3EE2FFD265CE201002829C7 /* HotPlaceUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -260,6 +312,9 @@
 			isa = PBXGroup;
 			children = (
 				F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */,
+				F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */,
+				F3EE2FF9265CB79F002829C7 /* PoliceStationModels+States+Errors.swift */,
+				F3EE2FFF265CE255002829C7 /* HotPlaceModels+States+Errors.swift */,
 			);
 			path = "Models+States+Errors";
 			sourceTree = "<group>";
@@ -270,6 +325,8 @@
 				F3C8FF76262AC0D000111AB5 /* UseCase.swift */,
 				F3C8FF97262AC83500111AB5 /* Model.swift */,
 				F386055E26397DF700DD5C47 /* State.swift */,
+				F38605632639A48600DD5C47 /* Error.swift */,
+				F341C03B264B9F8B00639C13 /* Location.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -277,18 +334,28 @@
 		F3DCC1B9262ABA88005247C4 /* RIBs */ = {
 			isa = PBXGroup;
 			children = (
-				A26E6AE02658F1E2001C214A /* LoggedIn */,
-				A26E6AEF2658F1E2001C214A /* LoggedOut */,
-				A26E6AEA2658F1E2001C214A /* Map */,
-				A26E6AF52658F1E2001C214A /* Root */,
-				A26E6AE52658F1E2001C214A /* SignUp */,
+				F341C040264BA5B100639C13 /* FloatingActions */,
+				F38605652639A78200DD5C47 /* Map */,
+				F3C8FF5B262ABC1800111AB5 /* LoggedOut */,
+				F33BEAFF262A97D500C5444B /* LoggedIn */,
+				F305100B262825FA00D63D64 /* Root */,
 			);
 			path = RIBs;
+			sourceTree = "<group>";
+		};
+		F3DF55BD265A2E9500D03375 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F3DF55BE265A2EB000D03375 /* Debug.xcconfig */,
+				F3DF55BF265A300200D03375 /* Release.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		F3F598C4262815F700F48F72 = {
 			isa = PBXGroup;
 			children = (
+				F3DF55BD265A2E9500D03375 /* Config */,
 				F3F598CF262815F700F48F72 /* GetHomeSafe */,
 				F3F598E6262815F800F48F72 /* GetHomeSafeTests */,
 				F3F598F1262815F800F48F72 /* GetHomeSafeUITests */,
@@ -313,6 +380,7 @@
 			children = (
 				F3C8FF6A262ABC4A00111AB5 /* Problem Domain */,
 				F3DCC1B9262ABA88005247C4 /* RIBs */,
+				F341C049264C059200639C13 /* UI */,
 				F30510182628264000D63D64 /* App */,
 				F3F598D9262815F800F48F72 /* Assets.xcassets */,
 				F3F598DB262815F800F48F72 /* LaunchScreen.storyboard */,
@@ -326,6 +394,8 @@
 			children = (
 				F3F598E7262815F800F48F72 /* GetHomeSafeTests.swift */,
 				F3F598E9262815F800F48F72 /* Info.plist */,
+				F3EE2FFB265CCAF7002829C7 /* PoliceStationUseCaseTest.swift */,
+				F3EE3003265CE32F002829C7 /* HotPlaceUseCaseTest.swift */,
 			);
 			path = GetHomeSafeTests;
 			sourceTree = "<group>";
@@ -601,36 +671,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */,
+				F3C3162D264B80DD007177E4 /* CCTVUseCase.swift in Sources */,
+				F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */,
+				F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */,
+				F3EE2FF8265CB73D002829C7 /* PoliceStationUseCase.swift in Sources */,
+				F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */,
+				F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */,
+				F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */,
 				F386055F26397DF700DD5C47 /* State.swift in Sources */,
-				A26E6B122658F1E3001C214A /* RootBuilder.swift in Sources */,
-				A26E6B102658F1E3001C214A /* RootComponent+LoggedIn.swift in Sources */,
-				A26E6B0C2658F1E3001C214A /* LoggedOutRouter.swift in Sources */,
-				A26E6AFD2658F1E2001C214A /* LoggedInRouter.swift in Sources */,
-				A26E6B0B2658F1E3001C214A /* LoggedOutBuilder.swift in Sources */,
-				A26E6B012658F1E2001C214A /* SignUpRouter.swift in Sources */,
+				F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */,
+				F386056D2639A79500DD5C47 /* MapInteractor.swift in Sources */,
+				F386056B2639A79500DD5C47 /* MapViewController.swift in Sources */,
+				F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */,
+				F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */,
+				F3EE3006265CEA47002829C7 /* Icons.swift in Sources */,
+				F341C04C264C05A600639C13 /* UIToggleButton.swift in Sources */,
+				F3EE3000265CE255002829C7 /* HotPlaceModels+States+Errors.swift in Sources */,
 				F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */,
-				A26E6B042658F1E2001C214A /* MapRouter.swift in Sources */,
-				A26E6AFE2658F1E2001C214A /* LoggedInInteractor.swift in Sources */,
+				F341C045264BA5E800639C13 /* FloatingActionsRouter.swift in Sources */,
+				F3EE2FFE265CE201002829C7 /* HotPlaceUseCase.swift in Sources */,
+				F341C047264BA5E800639C13 /* FloatingActionsBuilder.swift in Sources */,
+				F3EE2FFA265CB79F002829C7 /* PoliceStationModels+States+Errors.swift in Sources */,
+				F341C048264BA5E800639C13 /* FloatingActionsInteractor.swift in Sources */,
 				F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */,
-				A26E6B062658F1E3001C214A /* MapViewController.swift in Sources */,
-				A26E6B0F2658F1E3001C214A /* RootViewController.swift in Sources */,
+				F341C050264CE47C00639C13 /* MapViewModel.swift in Sources */,
+				F341C046264BA5E800639C13 /* FloatingActionsViewController.swift in Sources */,
+				F386056C2639A79500DD5C47 /* MapBuilder.swift in Sources */,
+				F38605642639A48600DD5C47 /* Error.swift in Sources */,
+				F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */,
+				F3D098F2264A28EE00423207 /* LoggedInComponent+Map.swift in Sources */,
 				F3F598D3262815F700F48F72 /* SceneDelegate.swift in Sources */,
-				A26E6AFC2658F1E2001C214A /* LoggedInBuilder.swift in Sources */,
-				A26E6B052658F1E3001C214A /* MapInteractor.swift in Sources */,
-				A26E6AFF2658F1E2001C214A /* LoggedInComponent+Map.swift in Sources */,
-				A26E6B112658F1E3001C214A /* RootRouter.swift in Sources */,
-				A26E6B072658F1E3001C214A /* MapBuilder.swift in Sources */,
-				A26E6B0E2658F1E3001C214A /* RootInteractor.swift in Sources */,
+				F3C8FF60262ABC2800111AB5 /* LoggedOutRouter.swift in Sources */,
+				F3C3162F264B833D007177E4 /* CCTVModels+States+Errors.swift in Sources */,
 				F3051035262826DF00D63D64 /* SceneComponent.swift in Sources */,
+				F393093C265F63D0003E57D7 /* DIContainer.swift in Sources */,
+				F341C03C264B9F8B00639C13 /* Location.swift in Sources */,
+				F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */,
+				F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */,
 				F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */,
-				A26E6B032658F1E2001C214A /* SignUpBuilder.swift in Sources */,
-				A26E6B092658F1E3001C214A /* LoggedOutComponent+SignUp.swift in Sources */,
-				A26E6B0A2658F1E3001C214A /* LoggedOutInteractor.swift in Sources */,
-				A26E6B0D2658F1E3001C214A /* RootComponent+LoggedOut.swift in Sources */,
+				F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */,
+				F3BC259926296B5000C7FC36 /* RootBuilder.swift in Sources */,
 				F3C8FF98262AC83500111AB5 /* Model.swift in Sources */,
-				A26E6B002658F1E2001C214A /* SignUpViewController.swift in Sources */,
-				A26E6B022658F1E2001C214A /* SignUpInteractor.swift in Sources */,
-				A26E6B082658F1E3001C214A /* LoggedOutViewController.swift in Sources */,
 				F3C8FF6E262ABD9A00111AB5 /* AuthenticationUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +721,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3EE3004265CE32F002829C7 /* HotPlaceUseCaseTest.swift in Sources */,
+				F3EE2FFC265CCAF7002829C7 /* PoliceStationUseCaseTest.swift in Sources */,
 				F3F598E8262815F800F48F72 /* GetHomeSafeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -680,7 +764,9 @@
 /* Begin XCBuildConfiguration section */
 		F3F598F5262815F800F48F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DF55BE265A2EB000D03375 /* Debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -715,6 +801,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -729,10 +816,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -741,7 +828,9 @@
 		};
 		F3F598F6262815F800F48F72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3DF55BF265A300200D03375 /* Release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -776,6 +865,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -784,9 +874,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -798,10 +889,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1ADAC4ACAFE6CA780C6E6934 /* Pods-GetHomeSafe.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GetHomeSafe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -819,10 +913,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D6C04E1238EFE0DA9858256 /* Pods-GetHomeSafe.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = GetHomeSafe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -886,7 +983,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47D7D65B5394D681FEED57AD /* Pods-GetHomeSafe-GetHomeSafeUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
 				INFOPLIST_FILE = GetHomeSafeUITests/Info.plist;
@@ -907,7 +1004,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34B65B1E2D7978ABC5162384 /* Pods-GetHomeSafe-GetHomeSafeUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 24523H34CV;
 				INFOPLIST_FILE = GetHomeSafeUITests/Info.plist;
@@ -934,7 +1031,7 @@
 				F3F598F6262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3F598F7262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafe" */ = {
 			isa = XCConfigurationList;
@@ -943,7 +1040,7 @@
 				F3F598F9262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3F598FA262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafeTests" */ = {
 			isa = XCConfigurationList;
@@ -952,7 +1049,7 @@
 				F3F598FC262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		F3F598FD262815F800F48F72 /* Build configuration list for PBXNativeTarget "GetHomeSafeUITests" */ = {
 			isa = XCConfigurationList;
@@ -961,7 +1058,7 @@
 				F3F598FF262815F800F48F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 

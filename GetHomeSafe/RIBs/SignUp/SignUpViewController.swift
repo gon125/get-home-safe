@@ -9,7 +9,7 @@ import RIBs
 import RxSwift
 import UIKit
 
-protocol SignUpPresentableListener: AnyObject {
+protocol SignUpPresentableListener: class {
     func signUp(phoneNum: String?, newID: String?, newPW: String?)
 }
 
@@ -20,7 +20,7 @@ final class SignUpViewController: UIViewController, SignUpPresentable, SignUpVie
 
         view.backgroundColor = UIColor.white
         let userFields = buildLoginFields()
-        buildSignUpButton(phoneField: userFields.phoneField, idField: userFields.1.idField, pwField: userFields.1.pwField)
+        buildSignUpButton(phoneField: userFields.phoneField, (idField: userFields.1.idField, pwField: userFields.1.pwField))
     }
 
     private var phoneField: UITextField?
@@ -50,32 +50,36 @@ final class SignUpViewController: UIViewController, SignUpPresentable, SignUpVie
         self.phoneField = phoneField
         view.addSubview(phoneField)
         phoneField.placeholder = "휴대폰 번호"
-        phoneField.snp.makeConstraints { (maker) in
-            maker.top.equalTo(titleLabel.snp.bottom).offset(18)
-            maker.leading.trailing.equalTo(self.view).inset(40)
-            maker.height.equalTo(38 * view.frame.width / 320)
-        }
+        makeConst(phoneField, Anchor: titleLabel)
         phoneField.returnKeyType = .next
 
         let idField = customTextField()
         self.idField = idField
         view.addSubview(idField)
         idField.placeholder = "아이디"
-        autoLayout(idField, below: phoneField, offset: 18)
+        makeConst(idField, Anchor: phoneField)
         idField.returnKeyType = .next
 
         let pwField = customTextField()
         self.pwField = pwField
         view.addSubview(pwField)
         pwField.placeholder = "비밀번호"
-        autoLayout(pwField, below: idField, offset: 15)
+        makeConst(pwField, Anchor: idField)
         pwField.returnKeyType = .done
 
         phoneField.delegate = self
         idField.delegate = self
         pwField.delegate = self
 
-        return (phoneField, (idField, pwField))
+        return (phoneField, idField, pwField)
+    }
+    
+    private func makeConst(_ target: UIView, Anchor: UIView) {
+        target.snp.makeConstraints { (maker) in
+            maker.top.equalTo(Anchor.snp.bottom).offset(18)
+            maker.leading.trailing.equalTo(self.view).inset(40)
+            maker.height.equalTo(38 * view.frame.width / 320)
+        }
     }
 
     private func buildSignUpButton(phoneField: UITextField, idField: UITextField, pwField: UITextField) {
@@ -105,19 +109,12 @@ final class SignUpViewController: UIViewController, SignUpPresentable, SignUpVie
         myTextField.layer.borderWidth = 0.5
         myTextField.layer.borderColor = UIColor.gray.cgColor
         myTextField.attributedPlaceholder = NSAttributedString(string: "Placeholder Color", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15)])
+                                        // .foregroundColor : UIColor.lightGray])
         myTextField.textColor = UIColor.gray
 
         return myTextField
     }
 
-    private func autoLayout(_ Field: TextFieldWithPadding, below: TextFieldWithPadding, offset: Double) {
-        Field.snp.makeConstraints { (maker) in
-            maker.top.equalTo(below.snp.bottom).offset(offset)
-            maker.leading.trailing.equalTo(self.view).inset(40)
-            maker.left.right.height.equalTo(below)
-        }
-    }
-    
     @objc private func didTapLoginButton() {
 
     }

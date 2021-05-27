@@ -17,7 +17,7 @@ protocol SignUpPresentable: Presentable {
     // TODO: Declare methods the interactor can invoke the presenter to present data.
 }
 
-protocol SignUpListener: AnyObject {
+protocol SignUpListener: class {
     func signup(phoneNum: String, newID: String, newPW: String)
 }
 

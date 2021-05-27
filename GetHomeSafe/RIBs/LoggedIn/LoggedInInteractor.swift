@@ -29,6 +29,7 @@ final class LoggedInInteractor: Interactor, LoggedInInteractable {
     override func didBecomeActive() {
         super.didBecomeActive()
         // TODO: Implement business logic here.
+        router?.routeToMap()
     }
 
     override func willResignActive() {

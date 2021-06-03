@@ -39,17 +39,15 @@ class SRTableViewCell: UITableViewCell {
     }
 
     private func autoLayout() {
-        placeName.snp.makeConstraints {(maker) in
-            maker.top.equalTo(self.snp.top).offset(8)
-            maker.leading.equalTo(self.snp.leading).inset(10)
-            maker.trailing.equalTo(self.snp.trailing).inset(10)
-            maker.width.equalTo(self.snp.width).inset(10)
+        placeName.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.snp.top).offset(10)
+            maker.leading.trailing.equalTo(self).inset(15)
+            maker.left.right.equalTo(self).inset(15)
         }
-        address.snp.makeConstraints {(maker) in
+        address.snp.makeConstraints { (maker) in
             maker.top.equalTo(placeName.snp.bottom).offset(5)
-            maker.leading.equalTo(self.snp.leading).inset(10)
-            maker.trailing.equalTo(self.snp.trailing).inset(10)
-            maker.width.equalTo(self.snp.width).inset(10)
+            maker.leading.trailing.equalTo(self).inset(15)
+            maker.left.right.equalTo(self).inset(15)
         }
     }
 

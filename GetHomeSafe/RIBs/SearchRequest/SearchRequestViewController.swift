@@ -34,8 +34,10 @@ final class SearchRequestViewController: UIViewController, SearchRequestPresenta
         addPlaceDataSet(placeName: "경북대", address: "대구..")
         addPlaceDataSet(placeName: "대구대", address: "경북..")
         addPlaceDataSet(placeName: "서울대", address: "서울..")
+        
         let upperView = makeUpperView()
         makeTableView(below: upperView)
+        
         view.backgroundColor = UIColor.white
     }
 
@@ -52,7 +54,14 @@ final class SearchRequestViewController: UIViewController, SearchRequestPresenta
             maker.left.right.equalTo(self.view.safeAreaLayoutGuide)
             maker.height.equalTo(110)
         }
+        
+        let searchField = makeTextField(upperView)
+        makeImageButton(searchField)
 
+        return upperView
+    }
+
+    private func makeTextField(_ upperView: UIView) -> UITextField {
         let searchField = customTextField()
         searchField.placeholder = "Search"
         view.addSubview(searchField)
@@ -62,7 +71,10 @@ final class SearchRequestViewController: UIViewController, SearchRequestPresenta
             maker.bottom.equalTo(upperView).inset(10)
             maker.width.equalTo(upperView.snp.width).inset(40)
         }
+        return searchField
+    }
 
+    private func makeImageButton(_ searchField: UITextField) {
         let cancleButton = UIButton()
         let cancleSVG: SVGKImage = SVGKImage(named: "letter-x")
         let cancleImg: UIImage = cancleSVG.uiImage
@@ -72,14 +84,12 @@ final class SearchRequestViewController: UIViewController, SearchRequestPresenta
         view.addSubview(cancleButton)
         cancleButton.snp.makeConstraints {(maker) in
             maker.top.equalTo(searchField.snp.top).offset(10)
-            maker.right.equalTo(upperView).inset(10)
             maker.left.equalTo(searchField.snp.right).offset(10)
+            maker.width.equalTo(30)
             maker.bottom.equalTo(searchField.snp.bottom).inset(10)
         }
-
-        return upperView
     }
-
+    
     private func makeTableView(below: UIView) {
         tableView.dataSource = self
         tableView.rowHeight = 60

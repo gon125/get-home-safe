@@ -11,6 +11,7 @@ import UIKit
 import SnapKit
 import Combine
 import SwiftUI
+import SVGKit
 
 protocol FloatingActionsPresentableListener: class {
     func searchRoute()
@@ -36,10 +37,12 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
     
     private lazy var cctvButton: UIButton = {
         let button = UIToggleButton()
-        button.layer.borderColor = UIColor.black.cgColor
+        let cctvSVG: SVGKImage = SVGKImage(named: "camera")
+        let cctvImg: UIImage = cctvSVG.uiImage
+
+        button.setImage(cctvImg, for: .normal)
+        button.layer.borderColor = UIColor.clear.cgColor
         button.layer.borderWidth = 1
-        button.setTitle("CCTV", for: .normal)
-        button.setTitleColor(.black, for: .normal)
         
         button.rx.tap.subscribe(onNext: { [weak self] in
             button.toggle()
@@ -53,10 +56,12 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
     }()
     private lazy var policeStationButton: UIButton = {
         let button = UIToggleButton()
-        button.layer.borderColor = UIColor.black.cgColor
+        let policSVG: SVGKImage = SVGKImage(named: "police-station")
+        let policeImg: UIImage = policSVG.uiImage
+
+        button.setImage(policeImg, for: .normal)
+        button.layer.borderColor = UIColor.clear.cgColor
         button.layer.borderWidth = 1
-        button.setTitle("치안센터", for: .normal)
-        button.setTitleColor(.black, for: .normal)
         
         button.rx.tap.subscribe(onNext: { [weak self] in
             button.toggle()
@@ -70,10 +75,12 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
     }()
     private lazy var hotPlacesButton: UIButton = {
         let button = UIToggleButton()
-        button.layer.borderColor = UIColor.black.cgColor
+        let roadSVG: SVGKImage = SVGKImage(named: "road")
+        let roadImg: UIImage = roadSVG.uiImage
+
+        button.setImage(roadImg, for: .normal)
+        button.layer.borderColor = UIColor.clear.cgColor
         button.layer.borderWidth = 1
-        button.setTitle("번화가", for: .normal)
-        button.setTitleColor(.black, for: .normal)
         
         button.rx.tap.subscribe(onNext: { [weak self] in
             button.toggle()
@@ -87,11 +94,15 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
     }()
     private lazy var searchRouteButton: UIButton = {
         let button = UIButton()
-        button.layer.borderColor = UIColor.black.cgColor
+        let naviSVG: SVGKImage = SVGKImage(named: "navigation")
+        var naviImg: UIImage = naviSVG.uiImage
+        naviImg = naviImg.withRenderingMode(.alwaysTemplate)
+        button.tintColor = UIColor.white
+
+        button.setImage(naviImg, for: .normal)
+        button.layer.borderColor = UIColor.clear.cgColor
         button.layer.borderWidth = 1
-        button.backgroundColor = .cyan
-        button.setTitle("길찾기", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = UIColor.init(red: 112/255, green: 160/255, blue: 237/255, alpha: 1)
         
         button.rx.tap.subscribe(onNext: { [weak self] in
         }).disposed(by: disposeBag)
@@ -118,40 +129,42 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
             $0.height.equalTo(80)
             $0.bottom.equalTo(view)
         }
+        floatingPanel.layer.cornerRadius = 4
         buildButtons()
     }
     private func buildButtons() {
-        floatingPanel.addSubview(cctvButton)
-        cctvButton.snp.makeConstraints {
-            $0.width.equalTo(70)
-            $0.height.equalTo(floatingPanel.snp_height).inset(10)
-            $0.centerY.equalTo(floatingPanel.snp_centerY)
-            $0.leading.equalTo(10)
-        }
-        
         floatingPanel.addSubview(policeStationButton)
         policeStationButton.snp.makeConstraints {
-            $0.width.equalTo(70)
-            $0.height.equalTo(floatingPanel.snp_height).inset(10)
+            $0.width.equalTo(50)
+            $0.right.equalTo(floatingPanel.snp.centerX).inset(-10)
+            $0.height.equalTo(floatingPanel.snp_height).inset(20)
             $0.centerY.equalTo(floatingPanel.snp_centerY)
-            $0.left.equalTo(cctvButton.snp_right).offset(10)
+        }
+        
+        floatingPanel.addSubview(cctvButton)
+        cctvButton.snp.makeConstraints {
+            $0.width.equalTo(50)
+            $0.height.equalTo(floatingPanel.snp_height).inset(20)
+            $0.centerY.equalTo(floatingPanel.snp_centerY)
+            $0.right.equalTo(policeStationButton.snp.left).inset(-20)
         }
         
         floatingPanel.addSubview(hotPlacesButton)
         hotPlacesButton.snp.makeConstraints {
-            $0.width.equalTo(70)
-            $0.height.equalTo(floatingPanel.snp_height).inset(10)
+            $0.width.equalTo(50)
+            $0.left.equalTo(floatingPanel.snp.centerX).offset(10)
+            $0.height.equalTo(floatingPanel.snp_height).inset(20)
             $0.centerY.equalTo(floatingPanel.snp_centerY)
-            $0.left.equalTo(policeStationButton.snp_right).offset(10)
         }
         
         floatingPanel.addSubview(searchRouteButton)
         searchRouteButton.snp.makeConstraints {
-            $0.width.equalTo(70)
-            $0.height.equalTo(floatingPanel.snp_height).inset(10)
+            $0.width.equalTo(50)
+            $0.height.equalTo(floatingPanel.snp_height).inset(20)
             $0.centerY.equalTo(floatingPanel.snp_centerY)
-            $0.left.equalTo(hotPlacesButton.snp_right).offset(10)
+            $0.left.equalTo(hotPlacesButton.snp_right).offset(20)
         }
+        searchRouteButton.layer.cornerRadius = 4
     }
 }
 

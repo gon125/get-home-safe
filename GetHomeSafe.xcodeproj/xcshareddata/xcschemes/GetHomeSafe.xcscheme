@@ -38,16 +38,6 @@
                ReferencedContainer = "container:GetHomeSafe.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F3F598ED262815F800F48F72"
-               BuildableName = "GetHomeSafeUITests.xctest"
-               BlueprintName = "GetHomeSafeUITests"
-               ReferencedContainer = "container:GetHomeSafe.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

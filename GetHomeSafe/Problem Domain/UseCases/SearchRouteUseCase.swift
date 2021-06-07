@@ -9,7 +9,9 @@ import Combine
 import Foundation
 
 protocol SearchRouteUseCase: UseCase {
-    func getRoute(from: Location, to: Location) -> AnyPublisher<Route, Never>
+    func getRoute(from: Location, to: Location) -> AnyPublisher<Route?, Never>
+    func getRoute(from: Location, to: String) -> AnyPublisher<Route?, Never>
+    
 }
 
 typealias Route = [Location]
@@ -18,7 +20,7 @@ typealias DefaultSearchRouteUseCase = NaverSearchRouteUseCase
 
 #if DEBUG
 extension Route {
-    static func stub(with currentLocation: Location) -> Route {
+    static func stub(with currentLocation: Location) -> Route? {
         var coordnates = [Coordinate2D]()
         for _ in 0..<10 {
             coordnates.append(
@@ -32,7 +34,11 @@ extension Route {
 }
 
 struct StubSearchRouteUseCase: SearchRouteUseCase {
-    func getRoute(from: Location, to: Location) -> AnyPublisher<Route, Never> {
+    func getRoute(from: Location, to: String) -> AnyPublisher<Route?, Never> {
+        Just(Route.stub(with: from)).eraseToAnyPublisher()
+    }
+    
+    func getRoute(from: Location, to: Location) -> AnyPublisher<Route?, Never> {
         Just(Route.stub(with: from)).eraseToAnyPublisher()
     }
 }
@@ -41,12 +47,24 @@ struct StubSearchRouteUseCase: SearchRouteUseCase {
 // MARK: - Naver Search Route UseCase
 
 struct NaverSearchRouteUseCase: SearchRouteUseCase {
-    let repository: RouteRepository
+
+    let routeRepository: RouteRepository
+    let locationRepository: LocationRepository
     
-    func getRoute(from: Location, to: Location) -> AnyPublisher<Route, Never> {
-        repository.getRoute(from: from, to: to)
-            .replaceNil(with: [])
-            .replaceError(with: [])
+    func getRoute(from: Location, to: Location) -> AnyPublisher<Route?, Never> {
+        routeRepository.getRoute(from: from, to: to)
+            .replaceError(with: .none)
             .eraseToAnyPublisher()
     }
+    
+    func getRoute(from: Location, to: String) -> AnyPublisher<Route?, Never> {
+        locationRepository.getLocation(of: to, near: from)
+            .flatMap {
+                routeRepository.getRoute(from: from, to: $0)
+            }
+            .replaceError(with: .none)
+            .eraseToAnyPublisher()
+            
+    }
+    
 }

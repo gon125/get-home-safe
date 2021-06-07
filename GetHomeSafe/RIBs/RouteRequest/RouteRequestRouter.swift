@@ -2,7 +2,7 @@
 //  RouteRequestRouter.swift
 //  GetHomeSafe
 //
-//  Created by khs on 2021/06/02.
+//  Created by Geonhyeong LIm on 2021/06/07.
 //
 
 import RIBs
@@ -13,7 +13,7 @@ protocol RouteRequestInteractable: Interactable {
 }
 
 protocol RouteRequestViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy
+    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
 }
 
 final class RouteRequestRouter: ViewableRouter<RouteRequestInteractable, RouteRequestViewControllable>, RouteRequestRouting {

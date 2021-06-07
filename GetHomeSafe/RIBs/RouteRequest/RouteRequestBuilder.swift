@@ -2,7 +2,7 @@
 //  RouteRequestBuilder.swift
 //  GetHomeSafe
 //
-//  Created by khs on 2021/06/02.
+//  Created by Geonhyeong LIm on 2021/06/07.
 //
 
 import RIBs
@@ -14,7 +14,7 @@ protocol RouteRequestDependency: Dependency {
 
 final class RouteRequestComponent: Component<RouteRequestDependency> {
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB
+    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
 
 // MARK: - Builder

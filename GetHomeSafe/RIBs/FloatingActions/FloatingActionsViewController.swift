@@ -102,7 +102,7 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
         button.setImage(naviImg, for: .normal)
         button.layer.borderColor = UIColor.clear.cgColor
         button.layer.borderWidth = 1
-        button.backgroundColor = UIColor.init(red: 112/255, green: 160/255, blue: 237/255, alpha: 1)
+        // button.backgroundColor = UIColor.init(red: 112/255, green: 160/255, blue: 237/255, alpha: 1)
         
         button.rx.tap.subscribe(onNext: { [weak self] in
         }).disposed(by: disposeBag)
@@ -132,39 +132,73 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
         floatingPanel.layer.cornerRadius = 4
         buildButtons()
     }
+    
     private func buildButtons() {
-        floatingPanel.addSubview(policeStationButton)
-        policeStationButton.snp.makeConstraints {
-            $0.width.equalTo(50)
+        let policeSection = UIView()
+        floatingPanel.addSubview(policeSection)
+        policeSection.snp.makeConstraints {
+            $0.width.equalTo(55)
             $0.right.equalTo(floatingPanel.snp.centerX).inset(-10)
-            $0.height.equalTo(floatingPanel.snp_height).inset(20)
+            $0.height.equalTo(floatingPanel.snp_height).inset(15)
             $0.centerY.equalTo(floatingPanel.snp_centerY)
         }
+        configureButtonSection(section: policeSection, topOffset: 0, button: policeStationButton, label: "치안센터")
         
-        floatingPanel.addSubview(cctvButton)
-        cctvButton.snp.makeConstraints {
-            $0.width.equalTo(50)
-            $0.height.equalTo(floatingPanel.snp_height).inset(20)
+        let cctvSection = UIView()
+        floatingPanel.addSubview(cctvSection)
+        cctvSection.snp.makeConstraints {
+            $0.width.equalTo(55)
+            $0.height.equalTo(floatingPanel.snp_height).inset(15)
             $0.centerY.equalTo(floatingPanel.snp_centerY)
             $0.right.equalTo(policeStationButton.snp.left).inset(-20)
         }
+        configureButtonSection(section: cctvSection, topOffset: 0, button: cctvButton, label: "CCTV")
         
-        floatingPanel.addSubview(hotPlacesButton)
-        hotPlacesButton.snp.makeConstraints {
-            $0.width.equalTo(50)
-            $0.left.equalTo(floatingPanel.snp.centerX).offset(10)
-            $0.height.equalTo(floatingPanel.snp_height).inset(20)
+        let hotPlacesSection = UIView()
+        floatingPanel.addSubview(hotPlacesSection)
+        hotPlacesSection.snp.makeConstraints {
+                $0.width.equalTo(55)
+                $0.left.equalTo(floatingPanel.snp.centerX).offset(10)
+                $0.height.equalTo(floatingPanel.snp_height).inset(15)
+                $0.centerY.equalTo(floatingPanel.snp_centerY)
+            }
+        configureButtonSection(section: hotPlacesSection, topOffset: 0, button: hotPlacesButton, label: "번화가")
+        
+        let naviSection = UIView()
+        floatingPanel.addSubview(naviSection)
+        naviSection.snp.makeConstraints {
+            $0.width.equalTo(55)
+            $0.left.equalTo(hotPlacesButton.snp_right).offset(25)
+            $0.height.equalTo(floatingPanel.snp_height).inset(10)
             $0.centerY.equalTo(floatingPanel.snp_centerY)
         }
-        
-        floatingPanel.addSubview(searchRouteButton)
-        searchRouteButton.snp.makeConstraints {
-            $0.width.equalTo(50)
-            $0.height.equalTo(floatingPanel.snp_height).inset(20)
-            $0.centerY.equalTo(floatingPanel.snp_centerY)
-            $0.left.equalTo(hotPlacesButton.snp_right).offset(20)
+        naviSection.backgroundColor = UIColor.init(red: 112/255, green: 160/255, blue: 237/255, alpha: 1)
+        naviSection.layer.cornerRadius = 4
+        configureButtonSection(section: naviSection, topOffset: 5, button: searchRouteButton, label: "길찾기")
+    }
+    
+    private func configureButtonSection(section: UIView, topOffset: Double, button: UIButton, label: String) {
+        floatingPanel.addSubview(section)
+        section.addSubview(button)
+        button.snp.makeConstraints {
+            $0.top.equalTo(section).offset(topOffset)
+            $0.width.height.equalTo(35)
+            $0.centerX.equalTo(section.snp_centerX)
         }
-        searchRouteButton.layer.cornerRadius = 4
+        
+        let newLabel = UITextView()
+        newLabel.text = label
+        newLabel.backgroundColor = UIColor.clear
+        if label == "길찾기" {
+            newLabel.textColor = UIColor.white
+        }
+        section.addSubview(newLabel)
+        newLabel.snp.makeConstraints {
+            $0.top.equalTo(button.snp.bottom).inset(5)
+            $0.width.bottom.equalTo(section)
+            $0.centerX.equalTo(button.snp.centerX)
+        }
+        newLabel.textAlignment = .center
     }
 }
 

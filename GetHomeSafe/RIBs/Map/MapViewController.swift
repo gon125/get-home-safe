@@ -14,6 +14,14 @@ import Combine
 
 final class MapViewController: UIViewController, MapViewControllable, NMFMapViewCameraDelegate {
     
+    func popover(viewController: ViewControllable) {
+        present(viewController.uiviewController, animated: true)
+    }
+    
+    func dismiss(viewController: ViewControllable) {
+        viewController.uiviewController.dismiss(animated: true)
+    }
+    
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)

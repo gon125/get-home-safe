@@ -10,7 +10,7 @@ import XCTest
 
 class RouteRepositoryTests: XCTestCase {
 
-    func testGetOneRouteInFourSeconds() throws {
+    func testGetOneRouteInSixSeconds() throws {
         let repository: RouteRepository = DefaultRouteRepository()
         let start = Location(latitude: 37.35970, longitude: 127.1058342)
         let goal = Location(latitude: 35.179470, longitude: 129.075986)
@@ -23,7 +23,7 @@ class RouteRepositoryTests: XCTestCase {
                 output = $0
                 expectation.fulfill()
             }
-        wait(for: [expectation], timeout: 4)
+        wait(for: [expectation], timeout: 6)
         cancellable.cancel()
         XCTAssertNotNil(output)
     }

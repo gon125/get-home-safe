@@ -3,7 +3,7 @@
 //  TableViewExample
 //
 //  Created by Fury on 29/05/2019.
-//  Copyright © 2019 Fury. All rights reserved.
+//  Copyright © 2019 Fury. All rights reserved
 //
 
 import SnapKit
@@ -18,7 +18,7 @@ class RRTableViewCell: UITableViewCell {
         placeName.font = UIFont.boldSystemFont(ofSize: 17)
         return placeName
     }()
-    
+
     let address: UILabel = {
         let address = UILabel()
         address.translatesAutoresizingMaskIntoConstraints = false

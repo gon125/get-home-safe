@@ -13,7 +13,7 @@ protocol RouteRequestInteractable: Interactable {
 }
 
 protocol RouteRequestViewControllable: ViewControllable {
-    // TODO: Declare methods the router invokes to manipulate the view hierarchy.
+    // TODO: Declare methods the router invokes to manipulate the view hierarchy
 }
 
 final class RouteRequestRouter: ViewableRouter<RouteRequestInteractable, RouteRequestViewControllable>, RouteRequestRouting {

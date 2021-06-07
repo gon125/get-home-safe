@@ -31,9 +31,9 @@ final class RouteRequestViewController: UIViewController, RouteRequestPresentabl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addPlaceDataSet(placeName: "경북대", address: "대구..")
-        addPlaceDataSet(placeName: "대구대", address: "경북..")
-        addPlaceDataSet(placeName: "서울대", address: "서울..")
+        addPlaceDataSet(placeName: "경북대학교 대구캠퍼스", address: "대구 북구 대학로 80")
+        addPlaceDataSet(placeName: "경북대학교 상주캠퍼스", address: "경북 상주시 경상대로 2559")
+        addPlaceDataSet(placeName: "경북대학교병원", address: "대구 중구 동덕로 130")
         
         let upperView = makeUpperView()
         makeTableView(below: upperView)

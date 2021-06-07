@@ -14,7 +14,7 @@ protocol RouteRequestDependency: Dependency {
 
 final class RouteRequestComponent: Component<RouteRequestDependency> {
 
-    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
+    // TODO: Declare 'fileprivate' dependencies that are only used by this RIB
 }
 
 // MARK: - Builder

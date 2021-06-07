@@ -9,7 +9,7 @@ import RIBs
 import RxSwift
 
 protocol RouteRequestRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
+    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router
 }
 
 protocol RouteRequestPresentable: Presentable {

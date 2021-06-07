@@ -3,7 +3,7 @@
 //  TableViewExample
 //
 //  Created by Fury on 29/05/2019.
-//  Copyright © 2019 Fury. All rights reserved.
+//  Copyright © 2019 Fury. All rights reserved
 //
 
 import Foundation

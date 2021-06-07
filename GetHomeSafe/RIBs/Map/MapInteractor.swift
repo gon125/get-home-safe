@@ -11,6 +11,7 @@ import Combine
 
 protocol MapRouting: ViewableRouting {
     func routeToFloatingActions()
+    func routeToRouteRequest()
 }
 
 protocol MapPresentable: Presentable {
@@ -97,7 +98,7 @@ final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractabl
     }
     
     func routeToSearchRoute() {
-        //
+        router?.routeToRouteRequest()
     }
     
     // MARK: - Private

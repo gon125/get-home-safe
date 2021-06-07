@@ -18,5 +18,9 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>NMFClientId</key>
+	<string>$(NM_CLIENT_ID)</string>
+	<key>NMFClientSecret</key>
+	<string>$(NM_CLIENT_SECRET)</string>
 </dict>
 </plist>

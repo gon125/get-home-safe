@@ -99,6 +99,7 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
         button.backgroundColor = UIColor.init(red: 112/255, green: 160/255, blue: 237/255, alpha: 1)
         
         button.rx.tap.subscribe(onNext: { [weak self] in
+            self?.listener?.searchRoute()
         }).disposed(by: disposeBag)
         return button
     }()

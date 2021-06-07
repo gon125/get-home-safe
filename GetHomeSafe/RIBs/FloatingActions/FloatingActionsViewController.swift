@@ -150,7 +150,7 @@ final class FloatingActionsViewController: UIViewController, FloatingActionsPres
             $0.width.equalTo(55)
             $0.height.equalTo(floatingPanel.snp_height).inset(15)
             $0.centerY.equalTo(floatingPanel.snp_centerY)
-            $0.right.equalTo(policeStationButton.snp.left).inset(-20)
+            $0.right.equalTo(policeStationButton.snp.left).inset(-25)
         }
         configureButtonSection(section: cctvSection, topOffset: 0, button: cctvButton, label: "CCTV")
         

@@ -2,14 +2,14 @@
 //  RouteRequestInteractor.swift
 //  GetHomeSafe
 //
-//  Created by khs on 2021/06/02.
+//  Created by Geonhyeong LIm on 2021/06/07.
 //
 
 import RIBs
 import RxSwift
 
 protocol RouteRequestRouting: ViewableRouting {
-    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router
+    // TODO: Declare methods the interactor can invoke to manage sub-tree via the router.
 }
 
 protocol RouteRequestPresentable: Presentable {
@@ -41,5 +41,8 @@ final class RouteRequestInteractor: PresentableInteractor<RouteRequestPresentabl
     override func willResignActive() {
         super.willResignActive()
         // TODO: Pause any business logic.
+    }
+    func searchRoute(start: String?, destination: String) {
+        print(start, destination)
     }
 }

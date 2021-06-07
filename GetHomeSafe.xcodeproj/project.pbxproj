@@ -22,6 +22,13 @@
 		F341C04C264C05A600639C13 /* UIToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04B264C05A600639C13 /* UIToggleButton.swift */; };
 		F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */; };
 		F341C050264CE47C00639C13 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F341C04F264CE47C00639C13 /* MapViewModel.swift */; };
+		F3579BF02667B840009853EE /* RouteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3579BEF2667B840009853EE /* RouteRepository.swift */; };
+		F3579BF32667B89D009853EE /* RouteRepositoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3579BF22667B89D009853EE /* RouteRepositoryModels.swift */; };
+		F3579BF62667BB62009853EE /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3579BF52667BB62009853EE /* WebRepository.swift */; };
+		F3579BF82667BC4B009853EE /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3579BF72667BC4A009853EE /* APICall.swift */; };
+		F3579BFD2668BC0F009853EE /* RouteRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3579BFC2668BC0F009853EE /* RouteRepositoryTests.swift */; };
+		F383DA8F26676438003E19C3 /* SearchRouteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383DA8E26676438003E19C3 /* SearchRouteUseCase.swift */; };
+		F383DA9326678490003E19C3 /* SearchRouteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F383DA9226678490003E19C3 /* SearchRouteUseCaseTests.swift */; };
 		F386055F26397DF700DD5C47 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = F386055E26397DF700DD5C47 /* State.swift */; };
 		F38605612639934200DD5C47 /* RootComponent+LoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */; };
 		F38605642639A48600DD5C47 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605632639A48600DD5C47 /* Error.swift */; };
@@ -58,7 +65,6 @@
 		F3F598DA262815F800F48F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F598D9262815F800F48F72 /* Assets.xcassets */; };
 		F3F598DD262815F800F48F72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F598DB262815F800F48F72 /* LaunchScreen.storyboard */; };
 		F3F598E8262815F800F48F72 /* GetHomeSafeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598E7262815F800F48F72 /* GetHomeSafeTests.swift */; };
-		F3F598F3262815F800F48F72 /* GetHomeSafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F598F2262815F800F48F72 /* GetHomeSafeUITests.swift */; };
 		FF84FA9216D150D02D2E4E0D /* Pods_GetHomeSafe_GetHomeSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0379B6BA4CCE5EB2A5EF7C /* Pods_GetHomeSafe_GetHomeSafeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +108,13 @@
 		F341C04B264C05A600639C13 /* UIToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToggleButton.swift; sourceTree = "<group>"; };
 		F341C04D264C1AD200639C13 /* MapComponent+FloatingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapComponent+FloatingActions.swift"; sourceTree = "<group>"; };
 		F341C04F264CE47C00639C13 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		F3579BEF2667B840009853EE /* RouteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRepository.swift; sourceTree = "<group>"; };
+		F3579BF22667B89D009853EE /* RouteRepositoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRepositoryModels.swift; sourceTree = "<group>"; };
+		F3579BF52667BB62009853EE /* WebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
+		F3579BF72667BC4A009853EE /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		F3579BFC2668BC0F009853EE /* RouteRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteRepositoryTests.swift; sourceTree = "<group>"; };
+		F383DA8E26676438003E19C3 /* SearchRouteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouteUseCase.swift; sourceTree = "<group>"; };
+		F383DA9226678490003E19C3 /* SearchRouteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouteUseCaseTests.swift; sourceTree = "<group>"; };
 		F386055E26397DF700DD5C47 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		F38605602639934200DD5C47 /* RootComponent+LoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedIn.swift"; sourceTree = "<group>"; };
 		F38605632639A48600DD5C47 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
@@ -144,8 +157,6 @@
 		F3F598E7262815F800F48F72 /* GetHomeSafeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeSafeTests.swift; sourceTree = "<group>"; };
 		F3F598E9262815F800F48F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3F598EE262815F800F48F72 /* GetHomeSafeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetHomeSafeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3F598F2262815F800F48F72 /* GetHomeSafeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeSafeUITests.swift; sourceTree = "<group>"; };
-		F3F598F4262815F800F48F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +274,41 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		F3579BED2667B7EC009853EE /* DM */ = {
+			isa = PBXGroup;
+			children = (
+				F3579BF42667B95A009853EE /* Utilities */,
+				F3579BF12667B886009853EE /* Models */,
+				F3579BEE2667B7F4009853EE /* Repositories */,
+			);
+			path = DM;
+			sourceTree = "<group>";
+		};
+		F3579BEE2667B7F4009853EE /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				F3579BEF2667B840009853EE /* RouteRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		F3579BF12667B886009853EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3579BF22667B89D009853EE /* RouteRepositoryModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3579BF42667B95A009853EE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F3579BF52667BB62009853EE /* WebRepository.swift */,
+				F3579BF72667BC4A009853EE /* APICall.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F38605652639A78200DD5C47 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +350,7 @@
 				F3C3162C264B80DD007177E4 /* CCTVUseCase.swift */,
 				F3EE2FF7265CB73D002829C7 /* PoliceStationUseCase.swift */,
 				F3EE2FFD265CE201002829C7 /* HotPlaceUseCase.swift */,
+				F383DA8E26676438003E19C3 /* SearchRouteUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -311,6 +358,7 @@
 		F3C8FF75262AC05800111AB5 /* Models+States+Errors */ = {
 			isa = PBXGroup;
 			children = (
+				F341C03B264B9F8B00639C13 /* Location.swift */,
 				F3C8FF81262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift */,
 				F3C3162E264B833D007177E4 /* CCTVModels+States+Errors.swift */,
 				F3EE2FF9265CB79F002829C7 /* PoliceStationModels+States+Errors.swift */,
@@ -326,7 +374,6 @@
 				F3C8FF97262AC83500111AB5 /* Model.swift */,
 				F386055E26397DF700DD5C47 /* State.swift */,
 				F38605632639A48600DD5C47 /* Error.swift */,
-				F341C03B264B9F8B00639C13 /* Location.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -358,7 +405,6 @@
 				F3DF55BD265A2E9500D03375 /* Config */,
 				F3F598CF262815F700F48F72 /* GetHomeSafe */,
 				F3F598E6262815F800F48F72 /* GetHomeSafeTests */,
-				F3F598F1262815F800F48F72 /* GetHomeSafeUITests */,
 				F3F598CE262815F700F48F72 /* Products */,
 				AB1787B9BF25548B9B6DEA48 /* Pods */,
 				2175208C3ADB63F0FD3DF122 /* Frameworks */,
@@ -378,6 +424,7 @@
 		F3F598CF262815F700F48F72 /* GetHomeSafe */ = {
 			isa = PBXGroup;
 			children = (
+				F3579BED2667B7EC009853EE /* DM */,
 				F3C8FF6A262ABC4A00111AB5 /* Problem Domain */,
 				F3DCC1B9262ABA88005247C4 /* RIBs */,
 				F341C049264C059200639C13 /* UI */,
@@ -396,17 +443,10 @@
 				F3F598E9262815F800F48F72 /* Info.plist */,
 				F3EE2FFB265CCAF7002829C7 /* PoliceStationUseCaseTest.swift */,
 				F3EE3003265CE32F002829C7 /* HotPlaceUseCaseTest.swift */,
+				F383DA9226678490003E19C3 /* SearchRouteUseCaseTests.swift */,
+				F3579BFC2668BC0F009853EE /* RouteRepositoryTests.swift */,
 			);
 			path = GetHomeSafeTests;
-			sourceTree = "<group>";
-		};
-		F3F598F1262815F800F48F72 /* GetHomeSafeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F3F598F2262815F800F48F72 /* GetHomeSafeUITests.swift */,
-				F3F598F4262815F800F48F72 /* Info.plist */,
-			);
-			path = GetHomeSafeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -680,18 +720,22 @@
 				F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */,
 				F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */,
 				F386055F26397DF700DD5C47 /* State.swift in Sources */,
+				F3579BF02667B840009853EE /* RouteRepository.swift in Sources */,
 				F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */,
 				F386056D2639A79500DD5C47 /* MapInteractor.swift in Sources */,
 				F386056B2639A79500DD5C47 /* MapViewController.swift in Sources */,
 				F33BEAD926297AB500C5444B /* RootComponent+LoggedOut.swift in Sources */,
+				F3579BF82667BC4B009853EE /* APICall.swift in Sources */,
 				F3BC259A26296B5000C7FC36 /* RootInteractor.swift in Sources */,
 				F3EE3006265CEA47002829C7 /* Icons.swift in Sources */,
 				F341C04C264C05A600639C13 /* UIToggleButton.swift in Sources */,
 				F3EE3000265CE255002829C7 /* HotPlaceModels+States+Errors.swift in Sources */,
 				F3C8FF77262AC0D000111AB5 /* UseCase.swift in Sources */,
 				F341C045264BA5E800639C13 /* FloatingActionsRouter.swift in Sources */,
+				F3579BF62667BB62009853EE /* WebRepository.swift in Sources */,
 				F3EE2FFE265CE201002829C7 /* HotPlaceUseCase.swift in Sources */,
 				F341C047264BA5E800639C13 /* FloatingActionsBuilder.swift in Sources */,
+				F383DA8F26676438003E19C3 /* SearchRouteUseCase.swift in Sources */,
 				F3EE2FFA265CB79F002829C7 /* PoliceStationModels+States+Errors.swift in Sources */,
 				F341C048264BA5E800639C13 /* FloatingActionsInteractor.swift in Sources */,
 				F3F598D1262815F700F48F72 /* AppDelegate.swift in Sources */,
@@ -708,6 +752,7 @@
 				F393093C265F63D0003E57D7 /* DIContainer.swift in Sources */,
 				F341C03C264B9F8B00639C13 /* Location.swift in Sources */,
 				F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */,
+				F3579BF32667B89D009853EE /* RouteRepositoryModels.swift in Sources */,
 				F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */,
 				F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */,
 				F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */,
@@ -722,7 +767,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3EE3004265CE32F002829C7 /* HotPlaceUseCaseTest.swift in Sources */,
+				F383DA9326678490003E19C3 /* SearchRouteUseCaseTests.swift in Sources */,
 				F3EE2FFC265CCAF7002829C7 /* PoliceStationUseCaseTest.swift in Sources */,
+				F3579BFD2668BC0F009853EE /* RouteRepositoryTests.swift in Sources */,
 				F3F598E8262815F800F48F72 /* GetHomeSafeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -731,7 +778,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F598F3262815F800F48F72 /* GetHomeSafeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

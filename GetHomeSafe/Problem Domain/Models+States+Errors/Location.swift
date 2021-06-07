@@ -14,6 +14,7 @@ extension Locationable {
 }
 
 struct Location: Locationable {
+    var name: String?
     var coordinate: Coordinate2D
     
     init(latitude: Double, longitude: Double) {

@@ -2,51 +2,28 @@
 //  RouteRequestViewController.swift
 //  GetHomeSafe
 //
-//  Created by khs on 2021/06/02.
+//  Created by Geonhyeong LIm on 2021/06/07.
 //
 
 import RIBs
 import RxSwift
 import UIKit
-import SVGKit
 
 protocol RouteRequestPresentableListener: class {
-    // TODO: Declare properties and methods that the view controller can invoke to perform
-    // business logic, such as signIn(). This protocol is implemented by the corresponding
-    // interactor class.
+    func searchRoute(start: String?, destination: String)
 }
 
 final class RouteRequestViewController: UIViewController, RouteRequestPresentable, RouteRequestViewControllable {
-
+    
     weak var listener: RouteRequestPresentableListener?
     
-    private var placeData: [PlaceData] = []
-    
-    private let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(RRTableViewCell.self, forCellReuseIdentifier: RRTableViewCell.identifier)
-        return tableView
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        addPlaceDataSet(placeName: "경북대학교 대구캠퍼스", address: "대구 북구 대학로 80")
-        addPlaceDataSet(placeName: "경북대학교 상주캠퍼스", address: "경북 상주시 경상대로 2559")
-        addPlaceDataSet(placeName: "경북대학교병원", address: "대구 중구 동덕로 130")
-        
-        let upperView = makeUpperView()
-        makeTableView(below: upperView)
-        
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        makeUpperView()
         view.backgroundColor = UIColor.white
     }
-
-    private func addPlaceDataSet(placeName: String, address: String) {
-        placeData.append(PlaceData.init(placeName: placeName, address: address))
-    }
     
-    private func makeUpperView() -> UIView {
+    private func makeUpperView() {
         let upperView = UIView()
         upperView.backgroundColor = UIColor(displayP3Red: 123/255, green: 162/255, blue: 239/255, alpha: 1)
         view.addSubview(upperView)
@@ -61,8 +38,6 @@ final class RouteRequestViewController: UIViewController, RouteRequestPresentabl
         
         (sourceField, destField) = makeTextField(upperView)
         makeImageButton(sourceField, destField)
-        
-        return upperView
     }
     
     private func makeTextField(_ upperView: UIView) -> (UITextField, UITextField) {
@@ -91,8 +66,7 @@ final class RouteRequestViewController: UIViewController, RouteRequestPresentabl
     
     private func makeImageButton(_ sourceField: UITextField, _ destField: UITextField) {
         let cancleButton = UIButton()
-        let cancleSVG: SVGKImage = SVGKImage(named: "letter-x")
-        let cancleImg: UIImage = cancleSVG.uiImage
+        let cancleImg: UIImage = .init(named: "letter-x")!
         
         cancleButton.setImage(cancleImg, for: .normal)
         view.addSubview(cancleButton)
@@ -102,10 +76,12 @@ final class RouteRequestViewController: UIViewController, RouteRequestPresentabl
             maker.width.equalTo(30)
             maker.bottom.equalTo(sourceField.snp.bottom).inset(5)
         }
+        cancleButton.rx.tap.subscribe(onNext: { [weak self] in
+            self?.dismiss(animated: true)
+        }).disposed(by: disposeBag)
     
         let naviButton = UIButton()
-        let naviSVG: SVGKImage = SVGKImage(named: "magnifying-glass")
-        let naviImg: UIImage = naviSVG.uiImage
+        let naviImg: UIImage = .init(named: "magnifying-glass")!
 
         naviButton.setImage(naviImg, for: .normal)
         view.addSubview(naviButton)
@@ -115,19 +91,13 @@ final class RouteRequestViewController: UIViewController, RouteRequestPresentabl
             maker.width.equalTo(30)
             maker.bottom.equalTo(destField.snp.bottom).inset(5)
         }
+        naviButton.rx.tap.subscribe(onNext: { [weak self] in
+            guard let destination = destField.text, destination != "" else { return }
+            self?.listener?.searchRoute(start: sourceField.text == "" ? nil : sourceField.text, destination: destination)
+        }).disposed(by: disposeBag)
     }
     
-    private func makeTableView(below: UIView) {
-        tableView.dataSource = self
-        tableView.rowHeight = 60
-        tableView.separatorInset.left = 0
-        view.addSubview(tableView)
-        tableView.snp.makeConstraints {(maker) in
-            maker.top.equalTo(below.snp.bottom)
-            maker.left.right.equalTo(self.view)
-            maker.bottom.equalTo(self.view.snp.bottom)
-        }
-    }
+    private let disposeBag = DisposeBag()
     
     private func customTextField() -> TextFieldWithPadding {
         let myTextField = TextFieldWithPadding()
@@ -140,53 +110,24 @@ final class RouteRequestViewController: UIViewController, RouteRequestPresentabl
 
         return myTextField
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.placeData.count
-    }
-        
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("You selected cell #\(placeData[indexPath.row])!")
-    }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> UITableViewCell {
-//        cell.seletionStyle = .none
-        self.performSegue(withIdentifier: "yourIdentifier", sender: self)
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
-        let (testName) = placeData[indexPath.row]
-        cell.textLabel?.text = testName.placeName
-        return cell
-    }
-
 }
 
-class TextFieldWithPadding: UITextField {
-    var textPadding = UIEdgeInsets(
-        top: 10,
-        left: 12,
-        bottom: 10,
-        right: 12
-    )
+#if DEBUG
+import SwiftUI
 
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
-        let rect = super.textRect(forBounds: bounds)
-        return rect.inset(by: textPadding)
-    }
-
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        let rect = super.editingRect(forBounds: bounds)
-        return rect.inset(by: textPadding)
-    }
-}
-
-extension RouteRequestViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return placeData.count
-    }
+struct RouteRequestVCRepresentable: UIViewControllerRepresentable {
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) { }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RRTableViewCell.identifier, for: indexPath)
-        cell.placeName.text = placeData[indexPath.row].placeName ?? ""
-        cell.address.text = String(placeData[indexPath.row].address)
-        return cell
+    @available(iOS 13.0.0, *)
+    func makeUIViewController(context: Context) -> some UIViewController {
+        RouteRequestViewController()
     }
 }
+
+@available(iOS 13.0.0, *)
+struct RouteRequest_Previews: PreviewProvider {
+    static var previews: some View {
+        RouteRequestVCRepresentable()
+    }
+}
+#endif

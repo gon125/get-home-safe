@@ -12,7 +12,7 @@ protocol MapDependency: Dependency {
     // created by this RIB.
 }
 
-final class MapComponent: Component<MapDependency> {
+final class MapComponent: Component<MapDependency>, RouteRequestDependency {
 
     // TODO: Declare 'fileprivate' dependencies that are only used by this RIB.
 }
@@ -39,7 +39,8 @@ final class MapBuilder: Builder<MapDependency>, MapBuildable {
             hotPlaceUseCase: DefaultHotPlaceUseCase())
         viewController.viewModel.listener = interactor
         let floatingActionsBuilder = FloatingActionsBuilder(dependency: component)
+        let routeRequestBuilder = RouteRequestBuilder(dependency: component)
         interactor.listener = listener
-        return MapRouter(interactor: interactor, viewController: viewController, floatingActionsBuilder: floatingActionsBuilder)
+        return MapRouter(interactor: interactor, viewController: viewController, floatingActionsBuilder: floatingActionsBuilder, routeRequestBuilder: routeRequestBuilder)
     }
 }

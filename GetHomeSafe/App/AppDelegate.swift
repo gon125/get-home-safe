@@ -42,5 +42,6 @@ extension DIContainer {
         DIContainer.shared.register(DefaultHotPlaceUseCase() as HotPlaceUseCase)
         DIContainer.shared.register(DefaultPoliceStationUseCase() as PoliceStationUseCase)
         DIContainer.shared.register(DefaultAuthenticationUseCase() as AuthenticationUseCase)
+        DIContainer.shared.register(DefaultSearchRouteUseCase(routeRepository: DefaultRouteRepository(), locationRepository: DefaultLocationRepository()) as SearchRouteUseCase)
     }
 }

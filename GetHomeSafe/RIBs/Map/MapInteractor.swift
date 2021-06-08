@@ -28,7 +28,7 @@ protocol MapPresentable: Presentable {
     func dismissPoliceStationMarkers()
     func showHotPlaceMarkers()
     func dismissHotPlaceMarkers()
-    
+    func showRoute(_ route: Route)
 }
 
 protocol MapListener: class {
@@ -36,6 +36,7 @@ protocol MapListener: class {
 }
 
 final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractable, MapPresentableListener {
+    
     func cameraLocationChanged() {
         guard let currentCameraLocation = presenter.currentCameraLocation else { return }
         cctvUseCase.getCCTVs(near: currentCameraLocation).sink { [weak self] cctvs in
@@ -83,6 +84,10 @@ final class MapInteractor: PresentableInteractor<MapPresentable>, MapInteractabl
     
     func showPoliceStationMarkers() {
         presenter.showPoliceStationMarkers()
+    }
+    
+    func showRoute(_ route: Route) {
+        presenter.showRoute(route)
     }
     
     func dismissPoliceStationMarkers() {

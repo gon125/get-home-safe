@@ -19,5 +19,13 @@ struct StubPoliceStationUseCase: PoliceStationUseCase {
         return Just(policeStations).eraseToAnyPublisher()
     }
 }
-typealias DefaultPoliceStationUseCase = StubPoliceStationUseCase
 #endif
+
+typealias DefaultPoliceStationUseCase = SpringPoliceStationUseCase
+
+struct SpringPoliceStationUseCase: PoliceStationUseCase {
+    let repository: PoliceStationRepository
+    func getPoliceStations(near currentLocation: Location) -> AnyPublisher<[PoliceStation], Never> {
+        repository.getPoliceStationsNear(currentLocation: currentLocation)
+    }
+}

@@ -14,6 +14,9 @@ protocol RouteRequestPresentableListener: class {
 }
 
 final class RouteRequestViewController: UIViewController, RouteRequestPresentable, RouteRequestViewControllable {
+    func dismiss() {
+        dismiss(animated: true)
+    }
     
     weak var listener: RouteRequestPresentableListener?
     

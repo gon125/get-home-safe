@@ -61,11 +61,8 @@ final class MapViewController: UIViewController, MapViewControllable, NMFMapView
             $0.bottom.equalTo(naverMapView.snp.bottom).inset(120)
             $0.left.equalTo(naverMapView.snp.left).inset(10)
         }
+        naverMapView.mapView.positionMode = .compass
         naverMapView.mapView.logoAlign = .rightTop
-        if let currentLocation = viewModel.currentLocation {
-            naverMapView.mapView.moveCamera(.init(scrollTo: NMGLatLng(from: currentLocation.coordinate)))
-        }
-        
     }
     
     func mapViewCameraIdle(_ mapView: NMFMapView) {

@@ -37,6 +37,7 @@
 		F386056C2639A79500DD5C47 /* MapBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605682639A79500DD5C47 /* MapBuilder.swift */; };
 		F386056D2639A79500DD5C47 /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38605692639A79500DD5C47 /* MapInteractor.swift */; };
 		F393093C265F63D0003E57D7 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F393093B265F63D0003E57D7 /* DIContainer.swift */; };
+		F3A90F80266F3EC9007B7D37 /* CCTVUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A90F7F266F3EC9007B7D37 /* CCTVUseCaseTests.swift */; };
 		F3BC259726296B5000C7FC36 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259326296B5000C7FC36 /* RootRouter.swift */; };
 		F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259426296B5000C7FC36 /* RootViewController.swift */; };
 		F3BC259926296B5000C7FC36 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BC259526296B5000C7FC36 /* RootBuilder.swift */; };
@@ -73,6 +74,10 @@
 		F3F86F7D266DFFF5003BEB9D /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F86F7C266DFFF5003BEB9D /* LocationRepository.swift */; };
 		F3F86F7F266E0004003BEB9D /* LocationRepositoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F86F7E266E0004003BEB9D /* LocationRepositoryModels.swift */; };
 		F3F86F83266E250D003BEB9D /* LocationRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F86F82266E250D003BEB9D /* LocationRepositoryTests.swift */; };
+		F3F86F85266EF0BD003BEB9D /* CCTVRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F86F84266EF0BD003BEB9D /* CCTVRepository.swift */; };
+		F3F86F87266EF0D2003BEB9D /* PoliceStationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F86F86266EF0D2003BEB9D /* PoliceStationRepository.swift */; };
+		F3F86F89266EF774003BEB9D /* PoliceStationRepositoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F86F88266EF774003BEB9D /* PoliceStationRepositoryModels.swift */; };
+		F3F86F8B266EF79D003BEB9D /* CCTVRepositoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F86F8A266EF79D003BEB9D /* CCTVRepositoryModels.swift */; };
 		FF84FA9216D150D02D2E4E0D /* Pods_GetHomeSafe_GetHomeSafeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA0379B6BA4CCE5EB2A5EF7C /* Pods_GetHomeSafe_GetHomeSafeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +136,7 @@
 		F38605682639A79500DD5C47 /* MapBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapBuilder.swift; sourceTree = "<group>"; };
 		F38605692639A79500DD5C47 /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		F393093B265F63D0003E57D7 /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		F3A90F7F266F3EC9007B7D37 /* CCTVUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTVUseCaseTests.swift; sourceTree = "<group>"; };
 		F3BC259326296B5000C7FC36 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		F3BC259426296B5000C7FC36 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F3BC259526296B5000C7FC36 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
@@ -173,6 +179,10 @@
 		F3F86F7C266DFFF5003BEB9D /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
 		F3F86F7E266E0004003BEB9D /* LocationRepositoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryModels.swift; sourceTree = "<group>"; };
 		F3F86F82266E250D003BEB9D /* LocationRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryTests.swift; sourceTree = "<group>"; };
+		F3F86F84266EF0BD003BEB9D /* CCTVRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTVRepository.swift; sourceTree = "<group>"; };
+		F3F86F86266EF0D2003BEB9D /* PoliceStationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationRepository.swift; sourceTree = "<group>"; };
+		F3F86F88266EF774003BEB9D /* PoliceStationRepositoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoliceStationRepositoryModels.swift; sourceTree = "<group>"; };
+		F3F86F8A266EF79D003BEB9D /* CCTVRepositoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CCTVRepositoryModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +316,8 @@
 			children = (
 				F3579BEF2667B840009853EE /* RouteRepository.swift */,
 				F3F86F7C266DFFF5003BEB9D /* LocationRepository.swift */,
+				F3F86F84266EF0BD003BEB9D /* CCTVRepository.swift */,
+				F3F86F86266EF0D2003BEB9D /* PoliceStationRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -314,7 +326,9 @@
 			isa = PBXGroup;
 			children = (
 				F3579BF22667B89D009853EE /* RouteRepositoryModels.swift */,
+				F3F86F8A266EF79D003BEB9D /* CCTVRepositoryModels.swift */,
 				F3F86F7E266E0004003BEB9D /* LocationRepositoryModels.swift */,
+				F3F86F88266EF774003BEB9D /* PoliceStationRepositoryModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -466,6 +480,7 @@
 				F3EE3003265CE32F002829C7 /* HotPlaceUseCaseTest.swift */,
 				F383DA9226678490003E19C3 /* SearchRouteUseCaseTests.swift */,
 				F3579BFC2668BC0F009853EE /* RouteRepositoryTests.swift */,
+				F3A90F7F266F3EC9007B7D37 /* CCTVUseCaseTests.swift */,
 			);
 			path = GetHomeSafeTests;
 			sourceTree = "<group>";
@@ -745,12 +760,14 @@
 			files = (
 				F3F86F76266DD545003BEB9D /* RouteRequestRouter.swift in Sources */,
 				F33BEB04262A9A9900C5444B /* LoggedInBuilder.swift in Sources */,
+				F3F86F89266EF774003BEB9D /* PoliceStationRepositoryModels.swift in Sources */,
 				F3C3162D264B80DD007177E4 /* CCTVUseCase.swift in Sources */,
 				F3F86F78266DD545003BEB9D /* RouteRequestBuilder.swift in Sources */,
 				F3BC259826296B5000C7FC36 /* RootViewController.swift in Sources */,
 				F3C8FF63262ABC2800111AB5 /* LoggedOutInteractor.swift in Sources */,
 				F3EE2FF8265CB73D002829C7 /* PoliceStationUseCase.swift in Sources */,
 				F3C8FF61262ABC2800111AB5 /* LoggedOutViewController.swift in Sources */,
+				F3F86F8B266EF79D003BEB9D /* CCTVRepositoryModels.swift in Sources */,
 				F386056A2639A79500DD5C47 /* MapRouter.swift in Sources */,
 				F341C04E264C1AD200639C13 /* MapComponent+FloatingActions.swift in Sources */,
 				F386055F26397DF700DD5C47 /* State.swift in Sources */,
@@ -790,8 +807,10 @@
 				F393093C265F63D0003E57D7 /* DIContainer.swift in Sources */,
 				F341C03C264B9F8B00639C13 /* Location.swift in Sources */,
 				F3C8FF62262ABC2800111AB5 /* LoggedOutBuilder.swift in Sources */,
+				F3F86F85266EF0BD003BEB9D /* CCTVRepository.swift in Sources */,
 				F3579BF32667B89D009853EE /* RouteRepositoryModels.swift in Sources */,
 				F3F86F62266DD446003BEB9D /* TextFieldWithPadding.swift in Sources */,
+				F3F86F87266EF0D2003BEB9D /* PoliceStationRepository.swift in Sources */,
 				F33BEB03262A9A9900C5444B /* LoggedInRouter.swift in Sources */,
 				F3C8FF82262AC1AA00111AB5 /* AuthenticationModels+States+Errors.swift in Sources */,
 				F33BEB05262A9A9900C5444B /* LoggedInInteractor.swift in Sources */,
@@ -810,6 +829,7 @@
 				F3EE2FFC265CCAF7002829C7 /* PoliceStationUseCaseTest.swift in Sources */,
 				F3579BFD2668BC0F009853EE /* RouteRepositoryTests.swift in Sources */,
 				F3F86F83266E250D003BEB9D /* LocationRepositoryTests.swift in Sources */,
+				F3A90F80266F3EC9007B7D37 /* CCTVUseCaseTests.swift in Sources */,
 				F3F598E8262815F800F48F72 /* GetHomeSafeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

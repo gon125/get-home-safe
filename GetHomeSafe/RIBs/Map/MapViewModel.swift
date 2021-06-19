@@ -28,12 +28,31 @@ extension MapViewController {
         @Published var showPoliceStations = false
         @Published var hotPlaceMarkers: Set<NMFMarker> = Set()
         @Published var showHotPlaces = false
+        @Published var path: NMFPath?
         
         init() {
             setupBindings()
         }
         
         // MARK: - MapPresentable
+        func showRoute(_ route: Route) {
+            if path != nil { path?.mapView = nil; path = nil }
+            
+            let coords = route.map { NMGLatLng(lat: $0.coordinate.latitude, lng: $0.coordinate.longitude) }
+            if let path = NMFPath(points: coords) {
+                path.width = 8
+                path.outlineWidth = 2
+                path.color = .cyan
+                path.outlineColor = .white
+                path.passedColor = .gray
+                path.passedOutlineColor = .white
+                path.progress = 0.001
+                path.mapView = view?.naverMapView.mapView
+                self.path = path
+            }
+            view?.naverMapView.mapView.positionMode = .direction
+        }
+        
         func showCCTVMarkers() {
             showCCTVs = true
         }

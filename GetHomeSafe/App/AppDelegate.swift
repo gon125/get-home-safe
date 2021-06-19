@@ -38,9 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension DIContainer {
     static func registerDependencies() {
-        DIContainer.shared.register(DefaultCCTVUseCase() as CCTVUseCase)
+        DIContainer.shared.register(DefaultCCTVUseCase(repository: DefaultCCTVRepository()) as CCTVUseCase)
         DIContainer.shared.register(DefaultHotPlaceUseCase() as HotPlaceUseCase)
-        DIContainer.shared.register(DefaultPoliceStationUseCase() as PoliceStationUseCase)
+        DIContainer.shared.register(DefaultPoliceStationUseCase(repository: DefaultPoliceStationRepository()) as PoliceStationUseCase)
         DIContainer.shared.register(DefaultAuthenticationUseCase() as AuthenticationUseCase)
         DIContainer.shared.register(DefaultSearchRouteUseCase(routeRepository: DefaultRouteRepository(), locationRepository: DefaultLocationRepository()) as SearchRouteUseCase)
     }

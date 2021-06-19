@@ -19,6 +19,14 @@ struct StubCCTVUseCase: CCTVUseCase {
         return Just(cctvs).eraseToAnyPublisher()
     }
 }
-
-typealias DefaultCCTVUseCase = StubCCTVUseCase
 #endif
+
+typealias DefaultCCTVUseCase = SpringCCTVUseCase
+
+struct SpringCCTVUseCase: CCTVUseCase {
+    let repository: CCTVRepository
+    func getCCTVs(near currentLocation: Location) -> AnyPublisher<[CCTV], Never> {
+        repository.getCCTVsNear(currentLocation: currentLocation)
+    }
+    
+}

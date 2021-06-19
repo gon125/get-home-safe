@@ -34,8 +34,8 @@ final class MapBuilder: Builder<MapDependency>, MapBuildable {
         let viewController = MapViewController(viewModel: .init())
         let interactor = MapInteractor(
             presenter: viewController.viewModel,
-            cctvUseCase: DefaultCCTVUseCase(),
-            policeStationUseCase: DefaultPoliceStationUseCase(),
+            cctvUseCase: DefaultCCTVUseCase(repository: DefaultCCTVRepository()),
+            policeStationUseCase: DefaultPoliceStationUseCase(repository: DefaultPoliceStationRepository()),
             hotPlaceUseCase: DefaultHotPlaceUseCase())
         viewController.viewModel.listener = interactor
         let floatingActionsBuilder = FloatingActionsBuilder(dependency: component)
